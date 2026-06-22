@@ -1,5 +1,4 @@
 import styles from './Footer.module.css';
-import { NavLink } from 'react-router-dom';
 import CatIcon from '/src/assets/footer.svg?react';
 
 export default function Footer() {
@@ -7,7 +6,7 @@ export default function Footer() {
     <footer className={`${styles.footer}`}>
       <div className={`${styles.footerContainer} container`}>
         <div className={styles.logo}>
-          <CatIcon/>
+          <CatIcon />
           <span>Мяу-центр</span>
         </div>
       </div>

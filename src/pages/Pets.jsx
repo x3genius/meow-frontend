@@ -1,3 +1,3 @@
 export default function Pets() {
-    return <>Not Implemented: Pets</>
+  return <div className="NotImplemented">Not Implemented: Pets</div>;
 }

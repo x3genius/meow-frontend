@@ -1,0 +1,56 @@
+.centerText {
+  text-align: center;
+  max-width: 1160px;
+  margin-inline: auto;
+}
+
+.faqSection {
+  padding-block: 2rem;
+  gap: 0.5rem;
+}
+
+/* hero-section */
+
+.heroSection {
+  padding: 2rem 0;
+}
+
+.heroTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+/* help-section */
+
+.helpSection {
+  padding: 2rem 0;
+}
+
+.helpDonate {
+  cursor: pointer;
+  text-align: center;
+  text-decoration-color: var(--color-primary);
+  font-family: var(--font-headers);
+  font-weight: 500;
+}
+
+.qrWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.qrImage {
+  width: 400px;
+  height: 400px;
+  max-width: 100%;
+  object-fit: contain;
+  background-color: var(--color-inverse);
+  padding: 10px;
+  border-radius: 2rem;
+  padding: 0;
+  display: block;
+}

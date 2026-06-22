@@ -1,18 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap');
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 :root {
   --color-text: #000000;
-  --color-text-muted: #B3B3B3;
-  --color-inverse: #FFFFFF;
-  --color-primary: #9FC847;
-  --color-bg: #FFFFFF;
-  --color-bg-accent: #FFFADC;
-  --color-empty-100: #D9D9D9;
-  --color-empty-200: #B3B3B3;
+  --color-text-muted: #b3b3b3;
+  --color-inverse: #ffffff;
+  --color-primary: #9fc847;
+  --color-primary-hover: #769533;
+  --color-bg: #ffffff;
+  --color-bg-hover: #d2d2d2;
+  --color-bg-accent: #fffadc;
+  --color-empty-100: #d9d9d9;
+  --color-empty-200: #b3b3b3;
+  --color-empty-300: #959595;
 
   --font-headers: 'Rubik', sans-serif;
   --font-body: 'Roboto', sans-serif;
@@ -20,7 +25,8 @@
   --layout-padding: 10%;
 }
 
-html, body {
+html,
+body {
   font: 20px/160% var(--font-body);
   letter-spacing: 0;
   color: var(--color-text);
@@ -42,9 +48,23 @@ body {
   overflow-y: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-headers);
-  font-weight: bold;
+  font-weight: 500;
+  line-height: 110%;
+  text-align: center;
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 0.8rem;
+  }
 }
 
 .container {
@@ -61,6 +81,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main.container {
-  flex: 1 0 auto; 
+  flex: 1 0 auto;
   width: 100%;
+}
+
+.NotImplemented {
+  color: red;
+  background-color: rgb(255, 249, 88);
+}
+
+button:disabled {
+  border-color: red;
 }

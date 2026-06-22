@@ -1,0 +1,43 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 3px solid transparent;
+  border-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-inverse);
+  border-color: var(--color-primary);
+}
+.primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.inverted {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-color: var(--color-primary);
+}
+.inverted:hover {
+  background-color: var(--color-bg-hovers);
+  border-color: var(--color-primary-hover);
+}
+
+.normal {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+}
+.large {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 1.8rem;
+}

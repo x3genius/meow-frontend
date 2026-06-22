@@ -13,8 +13,12 @@ export default function Pet() {
         </div>
         <div className="animal-info">
           <h2>Кличка: Барсик</h2>
-          <p><strong>Возраст:</strong> 1 год</p>
-          <p><strong>Описание:</strong> Очень ласковый кот, любит спать на коленях.</p>
+          <p>
+            <strong>Возраст:</strong> 1 год
+          </p>
+          <p>
+            <strong>Описание:</strong> Очень ласковый кот, любит спать на коленях.
+          </p>
           <button className="btn-adopt">Взять домой</button>
         </div>
       </div>
