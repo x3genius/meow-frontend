@@ -1,6 +1,6 @@
-import Button from '../components/Button.jsx';
-import FAQ from '../components/FAQ.jsx';
-import PetsRandom from '../components/PetsRandom.jsx';
+import Button from '/src/basics/Button.jsx';
+import FAQ from '/src/basics/FAQ.jsx';
+import PetsRandom from '/src/components/PetsRandom.jsx';
 import styles from './Home.module.css';
 import DocIcon from '/src/assets/doc.svg?react';
 

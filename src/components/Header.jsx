@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
 import CatIcon from '/src/assets/cat.svg?react';
-import EmptyIcon from '/src/assets/empty.svg?react';
+import VkIcon from '/src/assets/vk.svg?react';
+import TgIcon from '/src/assets/tg.svg?react';
 
 const navClass = ({ isActive }) => (isActive ? styles.active : '');
 
@@ -48,10 +49,10 @@ export default function Header() {
             </div>
             <div className={styles.icons}>
               <a href="#" className="NotImplemented">
-                <EmptyIcon />
+                <VkIcon />
               </a>
-              <a href="#" className="NotImplemented">
-                <EmptyIcon />
+              <a href="https://t.me/meowcenterr">
+                <TgIcon />
               </a>
             </div>
           </div>

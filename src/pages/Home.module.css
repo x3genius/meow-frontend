@@ -14,7 +14,7 @@
 
 .heroSection {
   gap: 2rem;
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
 }
 
@@ -270,7 +270,7 @@
 .mapBlock {
   height: 100%;
   width: 100%;
-  background-color: var(--color-empty-100);
+  background-color: var(--color-gray-100);
   border-radius: 2rem;
   padding: 1.2rem;
 }

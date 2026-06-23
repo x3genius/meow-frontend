@@ -1,5 +1,5 @@
-import Button from '../components/Button.jsx';
-import FAQ from '../components/FAQ.jsx';
+import Button from '/src/basics/Button.jsx';
+import FAQ from '/src/basics/FAQ.jsx';
 import styles from './Help.module.css';
 
 export default function Help() {

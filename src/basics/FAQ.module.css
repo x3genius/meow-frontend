@@ -48,11 +48,11 @@
 }
 
 .faqButton.faqActive {
-  background-color: var(--color-empty-200);
+  background-color: var(--color-gray-200);
 }
 
 .faqButton.faqActive:hover {
-  background-color: var(--color-empty-300);
+  background-color: var(--color-gray-300);
 }
 
 .faqIcon {

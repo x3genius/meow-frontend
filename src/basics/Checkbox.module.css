@@ -1,0 +1,57 @@
+.buttonWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 3px solid var(--color-primary);
+}
+
+.buttonWrapper:hover {
+  border-color: var(--color-primary-hover);
+}
+
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 0.4rem;
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkmark {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-primary);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.hiddenInput:checked + .box .checkmark {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.label {
+  user-select: none;
+}

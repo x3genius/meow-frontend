@@ -15,9 +15,9 @@
   --color-bg: #ffffff;
   --color-bg-hover: #d2d2d2;
   --color-bg-accent: #fffadc;
-  --color-empty-100: #d9d9d9;
-  --color-empty-200: #b3b3b3;
-  --color-empty-300: #959595;
+  --color-gray-100: #d9d9d9;
+  --color-gray-200: #b3b3b3;
+  --color-gray-300: #959595;
 
   --font-headers: 'Rubik', sans-serif;
   --font-body: 'Roboto', sans-serif;

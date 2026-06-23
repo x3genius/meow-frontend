@@ -12,14 +12,13 @@
 /* hero-section */
 
 .heroSection {
-  padding: 2rem 0;
+  padding-bottom: 2rem;
 }
 
 .heroTags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1.5rem;
   justify-content: center;
 }
 

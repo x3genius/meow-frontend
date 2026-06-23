@@ -1,26 +1,43 @@
 import { useParams } from 'react-router-dom';
+import Button from '/src/basics/Button.jsx';
+import styles from './Pet.module.css';
+
 
 export default function Pet() {
   const { id } = useParams();
 
+  const pet = {
+    "name": "Лиззи",
+    "age": 1,
+    "description": "Хорошая киса",
+  }
+
   return (
-    <div className="animal-card-page">
-      <h1>Карточка животного #{id}</h1>
-      <div className="animal-container">
-        <div className="animal-photo">
-          {/* Сюда потом пойдет картинка из S3 */}
-          <div className="placeholder-img">Фото питомца</div>
+    <div className={styles.petPage}>
+      <div className={styles.petContainer}>
+        <div className={`${styles.petMedia} NotImplemented`}>
+          NotImplemented: PetMedia
         </div>
-        <div className="animal-info">
-          <h2>Кличка: Барсик</h2>
+        <div className={styles.petInfo}>
+          <h1 className={styles.petName}> {pet.name} </h1>
           <p>
-            <strong>Возраст:</strong> 1 год
+            <strong>Возраст:</strong> {pet.age}
           </p>
           <p>
-            <strong>Описание:</strong> Очень ласковый кот, любит спать на коленях.
+            {pet.description}
           </p>
-          <button className="btn-adopt">Взять домой</button>
         </div>
+      </div>
+      <div className={styles.petButtons}>
+        <Button disabled>
+          Видео
+        </Button>
+        <Button disabled>
+          Стать хозяином
+        </Button>
+        <Button disabled>
+          Взять на передержку
+        </Button>
       </div>
     </div>
   );
