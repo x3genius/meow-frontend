@@ -1,33 +1,45 @@
-name: Production Build
+name: Build and Deploy Meow-center App
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: 'npm'
+      - name: Setup Node.js v22.17.0
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.17.0"
+          cache: "npm"
 
-    - name: Install dependencies & Build
-      env:
-        VITE_API_URL: ${{ secrets.VITE_API_URL }}
-      run: |
-        npm ci
-        npm run build
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Upload Build Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: production-assets
-        path: dist/
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to Branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: pages/dist
+          folder: dist
+          clean: true
+
+      - name: Deploy to Server via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          source: "dist/*"
+          target: "/opt/meow/public"
+          strip_components: 1
