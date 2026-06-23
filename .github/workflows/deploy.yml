@@ -1,4 +1,4 @@
-name: CI - Build Application
+name: CD - Deploy to server
 
 on:
   push:
