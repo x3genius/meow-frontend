@@ -1,4 +1,4 @@
-name: Build and Deploy Meow-center App
+name: CI - Build Application
 
 on:
   push:
@@ -9,8 +9,9 @@ permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,24 +23,14 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Build project
         run: npm run build
 
-      - name: Deploy to Branch
+      - name: Push to Dist Branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: pages/dist
+          branch: dist
           folder: dist
           clean: true
-
-      - name: Deploy to Server via SCP
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "dist/*"
-          target: "/opt/meow/public"
-          strip_components: 1
