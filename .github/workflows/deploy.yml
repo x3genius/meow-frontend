@@ -31,6 +31,11 @@ jobs:
           known_hosts: "unnecessary"
           if_key_exists: replace
 
+      - name: Install rsync on remote server
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} \
+            "sudo apt-get update && sudo apt-get install -y rsync || (yum install -y rsync || dnf install -y rsync)"
+
       - name: Deploy via Rsync
         run: |
           rsync -atvzr --delete \
