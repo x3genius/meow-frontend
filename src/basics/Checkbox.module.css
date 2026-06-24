@@ -1,5 +1,6 @@
 .buttonWrapper {
   display: inline-flex;
+
   align-items: center;
   gap: 0.7rem;
   font-family: var(--font-body);
@@ -36,6 +37,7 @@
   border: 2px solid var(--color-primary);
   background-color: transparent;
   transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
 }
 
 .checkmark {
@@ -54,4 +56,12 @@
 
 .label {
   user-select: none;
+  width: max-content;
+  max-width: 100%;
+}
+
+@media (max-width: 350px) {
+  .label {
+    font-size: 0.8rem;
+  }
 }

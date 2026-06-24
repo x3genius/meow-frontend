@@ -1,6 +1,72 @@
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 .filtersWrapper { 
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem 1rem; 
     margin-bottom: 2rem;
+    align-items: center;
+}
+
+.cardsPage {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    justify-content: start;
+}
+
+@media (max-width: 1160px) {
+    .cardsPage {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .cardsPage {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 3rem 0;
+}
+
+.pageBtn, .arrowBtn {
+    background-color: var(--color-bg);
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageBtn:hover, .arrowBtn:hover {
+    background-color: var(--color-gray-100);
+}
+
+.activePage {
+    color: var(--color-text);
+    text-decoration: underline 2px solid var(--color-primary);
+    text-underline-offset: 0.5rem;
+}
+
+.dots {
+    padding: 0 0.25rem;
+    color: #94a3b8;
+    letter-spacing: 0.1rem;
 }
