@@ -1,8 +1,11 @@
+import { HashLink } from 'react-router-hash-link';
 import Button from '/src/basics/Button.jsx';
 import FAQ from '/src/basics/FAQ.jsx';
 import PetsRandom from '/src/components/PetsRandom.jsx';
+import ContactMap from '/src/components/ContactMap.jsx';
 import styles from './Home.module.css';
 import DocIcon from '/src/assets/doc.svg?react';
+
 
 export default function Home() {
   const scrollToSection = (id) => {
@@ -146,29 +149,64 @@ export default function Home() {
             <div className={styles.avatarWrapper}>
               <img src="team_empty.png" alt="😅" className={styles.avatar} />
             </div>
-            <p className={styles.avaterName}>Елизавета Елизавета</p>
-            <p className={styles.avaterTitle}>Учредитель</p>
+            <p className={styles.avatarName}>Имя Фам</p>
+            <p className={styles.avatarTitle}>Должность</p>
           </div>
           <div className={styles.teamCard}>
             <div className={styles.avatarWrapper}>
               <img src="team_empty.png" alt="😅" className={styles.avatar} />
             </div>
-            <p className={styles.avaterName}>Игорь Игорь</p>
-            <p className={styles.avaterTitle}>Учредитель</p>
+            <p className={styles.avatarName}>Имяя Фами</p>
+            <p className={styles.avatarTitle}>Должность</p>
           </div>
           <div className={styles.teamCard}>
             <div className={styles.avatarWrapper}>
               <img src="team_empty.png" alt="😅" className={styles.avatar} />
             </div>
-            <p className={styles.avaterName}>Иван Иван</p>
-            <p className={styles.avaterTitle}>Разнорабочий</p>
+            <p className={styles.avatarName}>Имяяя Фамил</p>
+            <p className={styles.avatarTitle}>Должность</p>
           </div>
           <div className={styles.teamCard}>
             <div className={styles.avatarWrapper}>
               <img src="team_empty.png" alt="😅" className={styles.avatar} />
             </div>
-            <p className={styles.avaterName}>Сергей Сергей</p>
-            <p className={styles.avaterTitle}>Разнорабочий</p>
+            <p className={styles.avatarName}>Имяяяя Фамили</p>
+            <p className={styles.avatarTitle}>Должность</p>
+          </div>
+          <div className={styles.teamCard}>
+            <div className={styles.avatarWrapper}>
+              <img src="team_empty.png" alt="😅" className={styles.avatar} />
+            </div>
+            <p className={styles.avatarName}>Имяяяяя Фамилия</p>
+            <p className={styles.avatarTitle}>Должность</p>
+          </div>
+          <div className={styles.teamCard}>
+            <div className={styles.avatarWrapper}>
+              <img src="team_empty.png" alt="😅" className={styles.avatar} />
+            </div>
+            <p className={styles.avatarName}>Имяяяяяя Фамилияя</p>
+            <p className={styles.avatarTitle}>Должность</p>
+          </div>
+          <div className={styles.teamCard}>
+            <div className={styles.avatarWrapper}>
+              <img src="team_empty.png" alt="😅" className={styles.avatar} />
+            </div>
+            <p className={styles.avatarName}>Имяяяяяяя Фамилияяя</p>
+            <p className={styles.avatarTitle}>Должность</p>
+          </div>
+          <div className={styles.teamCard}>
+            <div className={styles.avatarWrapper}>
+              <img src="team_empty.png" alt="😅" className={styles.avatar} />
+            </div>
+            <p className={styles.avatarName}>Имяяяяяяяя Фамилияяяя</p>
+            <p className={styles.avatarTitle}>Должность</p>
+          </div>
+          <div className={styles.teamCard}>
+            <div className={styles.avatarWrapper}>
+              <img src="team_empty.png" alt="😅" className={styles.avatar} />
+            </div>
+            <p className={styles.avatarName}>Имяяяяяяяяя Фамилияяяяя</p>
+            <p className={styles.avatarTitle}>Должность</p>
           </div>
         </div>
         <div className={styles.centerBtnWrapper}>
@@ -188,34 +226,38 @@ export default function Home() {
       <section id="docs" className={styles.docsSection}>
         <h1>Документы и реквизиты</h1>
         <div className={styles.docsList}>
-          <a className={`${styles.docItem} NotImplemented`} href="#">
+          <HashLink className={`${styles.docItem} NotImplemented`} href="#">
             <DocIcon /> Устав фонда
-          </a>
-          <a className={`${styles.docItem} NotImplemented`} href="#">
+          </HashLink>
+          <HashLink className={`${styles.docItem} NotImplemented`} href="#">
             <DocIcon /> Публичная оферта
-          </a>
-          <a className={`${styles.docItem} NotImplemented`} href="#">
+          </HashLink>
+          <HashLink className={`${styles.docItem} NotImplemented`} href="#">
             <DocIcon /> Свидетельство о регистрации
-          </a>
-          <a className={`${styles.docItem} NotImplemented`} href="#">
+          </HashLink>
+          <HashLink className={`${styles.docItem} NotImplemented`} href="#">
             <DocIcon /> Свидетельство налогоплательщика
-          </a>
-          <a className={`${styles.docItem} NotImplemented`} href="#">
+          </HashLink>
+          <HashLink className={`${styles.docItem} NotImplemented`} href="#">
             <DocIcon /> Свидетельство о регистрации юридического лица
-          </a>
+          </HashLink>
         </div>
         <div className={styles.qrWrapper}>
-          <a href="#" className="NotImplemented">
+          <HashLink to='/help'>
             <img src="help_qr.png" alt="Пожертвования" className={styles.qrImage} />
-          </a>
+          </HashLink>
+        </div>
+        <div className={styles.qrWrapper}>
+          <HashLink className={styles.docItem} href="/help">
+            <DocIcon /> Реквизиты для пожертвований
+          </HashLink>
         </div>
       </section>
       <section id="contacts" className={styles.contactsSection}>
         <h1>Контакты</h1>
         <div className={styles.contactsContent}>
           <div className={styles.mapBlock}>
-            {' '}
-            <p className="NotImplemented">NotImplemented: Card</p>{' '}
+            <ContactMap />
           </div>
           <div className={styles.contactsInfo}>
             <p className={styles.contactsTitle}>Адрес:</p>
@@ -225,19 +267,19 @@ export default function Home() {
             <p className={styles.contactsTitle}>Социальные сети:</p>
             <ul>
               <li>
-                <a href="#" className="NotImplemented">
+                <HashLink to="#" className="NotImplemented">
                   Кофе
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="#" className="NotImplemented">
+                <HashLink to="#" className="NotImplemented">
                   Чай
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="#" className="NotImplemented">
+                <HashLink to="#" className="NotImplemented">
                   Молоко
-                </a>
+                </HashLink>
               </li>
             </ul>
             <Button disabled>Присоединиться</Button>

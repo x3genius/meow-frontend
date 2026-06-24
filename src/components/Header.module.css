@@ -13,6 +13,11 @@
   width: 100%;
 }
 
+.headerContainer a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
 .logo {
   display: flex;
   flex-shrink: 0;

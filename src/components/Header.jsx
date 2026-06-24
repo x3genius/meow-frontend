@@ -4,6 +4,7 @@ import styles from './Header.module.css';
 import CatIcon from '/src/assets/cat.svg?react';
 import VkIcon from '/src/assets/vk.svg?react';
 import TgIcon from '/src/assets/tg.svg?react';
+import { HashLink } from 'react-router-hash-link';
 
 const navClass = ({ isActive }) => (isActive ? styles.active : '');
 
@@ -14,10 +15,12 @@ export default function Header() {
   return (
     <header className={`${styles.header}`}>
       <div className={`${styles.headerContainer} container`}>
-        <div className={styles.logo}>
-          <CatIcon />
-          <span>Мяу-центр</span>
-        </div>
+        <NavLink to="/">
+          <div className={styles.logo}>
+            <CatIcon />
+            <span>Мяу-центр</span>
+          </div>
+        </NavLink>
 
         <button
           className={`${styles.burger} ${isOpen ? styles.burgerActive : ''}`}
@@ -48,12 +51,13 @@ export default function Header() {
               <span className={styles.city}>Санкт-Петербург</span>
             </div>
             <div className={styles.icons}>
-              <a href="#" className="NotImplemented">
+              {/* <HashLink to="#" className="NotImplemented">
+              {/* <HashLink to="#" className="NotImplemented">
                 <VkIcon />
-              </a>
-              <a href="https://t.me/meowcenterr">
+              </HashLink> */}
+              <HashLink to="https://t.me/meowcenterr">
                 <TgIcon />
-              </a>
+              </HashLink>
             </div>
           </div>
         </div>
