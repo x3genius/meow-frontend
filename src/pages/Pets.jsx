@@ -16,16 +16,14 @@ export default function Pets() {
   const [itemsPerPage, setItemsPerPage] = useState(9);
 
   const genderOptions = [
-    { value: 'Мальчик', label: 'Мальчик' },
-    { value: 'Девочка', label: 'Девочка' }
+    { value: 'boy', label: 'Мальчик' },
+    { value: 'girl', label: 'Девочка' }
   ];
 
   const ageOptions = [
-    { value: 'under_1', label: 'До года' },
-    { value: '1_2', label: '1-2 года' },
-    { value: '3_4', label: '3-4 года' },
-    { value: '5_6', label: '5-6 лет' },
-    { value: 'over_7', label: 'От 7 лет' }
+    { value: 'little', label: 'Котёнок' },
+    { value: 'adult', label: 'Взрослый' },
+    { value: 'elderly', label: 'Пожилой' },
   ];
 
   // loading plug
@@ -36,8 +34,8 @@ export default function Pets() {
         id: String(i + 1),
         name: `Питомец ${i + 1}`,
         description: `Замечательный питомец под номером ${i + 1}, который ищет дом и любящую семью.`,
-        gender: i % 2 === 0 ? 'Мальчик' : 'Девочка',
-        age: ['under_1', '1_2', '3_4', '5_6', 'over_7'][i % 5],
+        gender: i % 2 === 0 ? 'boy' : 'girl',
+        age: ['little', 'adult', 'elderly'][i % 3],
         photos: [`https://picsum.photos/id/${(i + 10) * 2}/300/400`]
       }));
       setPets(mockPets);
