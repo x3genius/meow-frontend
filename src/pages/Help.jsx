@@ -1,6 +1,12 @@
 import Button from '/src/basics/Button.jsx';
 import FAQ from '/src/basics/FAQ.jsx';
 import styles from './Help.module.css';
+import { 
+  VOLOUNTEER_DATA, 
+  OWNER_DATA, 
+  OVEREXPOSURE_DATA,
+} from '/src/vars.jsx'
+
 
 export default function Help() {
   const scrollToSection = (id) => {
@@ -9,73 +15,6 @@ export default function Help() {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-
-  const volunteerData = [
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-  ];
-  const ownerData = [
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-  ];
-  const overexposureData = [
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-    {
-      question: 'not filled in',
-      answer: 'not filled in',
-    },
-  ];
 
   return (
     <>
@@ -121,7 +60,7 @@ export default function Help() {
           Общее описание процесса становления...
         </p>
         <div className="NotImplemented">
-          <FAQ items={volunteerData} />
+          <FAQ items={VOLOUNTEER_DATA} />
         </div>
       </section>
 
@@ -131,7 +70,7 @@ export default function Help() {
           Общее описание процесса становления...
         </p>
         <div className="NotImplemented">
-          <FAQ items={ownerData} />
+          <FAQ items={OWNER_DATA} />
         </div>
       </section>
 
@@ -141,7 +80,7 @@ export default function Help() {
           Общее описание процесса становления...
         </p>
         <div className="NotImplemented">
-          <FAQ items={overexposureData} />
+          <FAQ items={OVEREXPOSURE_DATA} />
         </div>
       </section>
     </>

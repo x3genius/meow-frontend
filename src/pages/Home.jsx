@@ -5,6 +5,15 @@ import PetsRandom from '/src/components/PetsRandom.jsx';
 import ContactMap from '/src/components/ContactMap.jsx';
 import styles from './Home.module.css';
 import DocIcon from '/src/assets/doc.svg?react';
+import { 
+  URL_TO_TAKE, 
+  URL_BECOME_VOLUNTEER, 
+  TEAM_MEMBERS,
+  FAQ_DATA, 
+  DOCUMENTS,
+  CONTACT_INFO, 
+  SOCIAL_LINKS
+} from '/src/vars.jsx'
 
 
 export default function Home() {
@@ -14,29 +23,6 @@ export default function Home() {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-
-  const faqData = [
-    {
-      question: 'Является ли «Мяу-центр» официальным Благотворительным фондом?',
-      answer: 'not filled in',
-    },
-    {
-      question: 'Как можно стать хозяином питомца?',
-      answer: 'not filled in',
-    },
-    {
-      question: 'Как можно взять питомца на передержку?',
-      answer: 'not filled in',
-    },
-    {
-      question: 'Как можно помочь центру?',
-      answer: 'not filled in',
-    },
-    {
-      question: 'Как стать волонтёром в «Мяу-Центр»?',
-      answer: 'not filled in',
-    },
-  ];
 
   return (
     <>
@@ -111,7 +97,7 @@ export default function Home() {
           <div className={styles.helpCard}>
             <p className={styles.helpCardTitle}>Стать хозяином</p>
             <p>Все наши питомцы здоровы, привиты и стерилизованы</p>
-            <Button href="/help#owner">Узнать подробнее</Button>
+            <Button href={URL_TO_TAKE('owner')}>Узнать подробнее</Button>
           </div>
           <div className={styles.helpCard}>
             <p className={styles.helpCardTitle}>Взять на передержку</p>
@@ -119,7 +105,7 @@ export default function Home() {
               Не уверены, что готовы к кошке насовсем? Передержка — идеальный способ
               проверить себя и сделать большое дело
             </p>
-            <Button href="/help#overexposure">Узнать подробнее</Button>
+            <Button href={URL_TO_TAKE('overexposure')}>Узнать подробнее</Button>
           </div>
         </div>
       </section>
@@ -145,72 +131,22 @@ export default function Home() {
           Лица нашего Благотворительного фонда «Мяу-Центр»
         </p>
         <div className={styles.teamGrid}>
-          <div className={styles.teamCard}>
-            <div className={styles.avatarWrapper}>
-              <img src="team_empty.png" alt="😅" className={styles.avatar} />
-            </div>
-            <p className={styles.avatarName}>Имя Фам</p>
-            <p className={styles.avatarTitle}>Должность</p>
+          {TEAM_MEMBERS.map((member) => (
+        <div key={member.id} className={styles.teamCard}>
+          <div className={styles.avatarWrapper}>
+            <img 
+              src={member.img} 
+              alt={member.name} 
+              className={styles.avatar} 
+            />
           </div>
-          <div className={styles.teamCard}>
-            <div className={styles.avatarWrapper}>
-              <img src="team_empty.png" alt="😅" className={styles.avatar} />
-            </div>
-            <p className={styles.avatarName}>Имяя Фами</p>
-            <p className={styles.avatarTitle}>Должность</p>
-          </div>
-          <div className={styles.teamCard}>
-            <div className={styles.avatarWrapper}>
-              <img src="team_empty.png" alt="😅" className={styles.avatar} />
-            </div>
-            <p className={styles.avatarName}>Имяяя Фамил</p>
-            <p className={styles.avatarTitle}>Должность</p>
-          </div>
-          <div className={styles.teamCard}>
-            <div className={styles.avatarWrapper}>
-              <img src="team_empty.png" alt="😅" className={styles.avatar} />
-            </div>
-            <p className={styles.avatarName}>Имяяяя Фамили</p>
-            <p className={styles.avatarTitle}>Должность</p>
-          </div>
-          <div className={styles.teamCard}>
-            <div className={styles.avatarWrapper}>
-              <img src="team_empty.png" alt="😅" className={styles.avatar} />
-            </div>
-            <p className={styles.avatarName}>Имяяяяя Фамилия</p>
-            <p className={styles.avatarTitle}>Должность</p>
-          </div>
-          <div className={styles.teamCard}>
-            <div className={styles.avatarWrapper}>
-              <img src="team_empty.png" alt="😅" className={styles.avatar} />
-            </div>
-            <p className={styles.avatarName}>Имяяяяяя Фамилияя</p>
-            <p className={styles.avatarTitle}>Должность</p>
-          </div>
-          <div className={styles.teamCard}>
-            <div className={styles.avatarWrapper}>
-              <img src="team_empty.png" alt="😅" className={styles.avatar} />
-            </div>
-            <p className={styles.avatarName}>Имяяяяяяя Фамилияяя</p>
-            <p className={styles.avatarTitle}>Должность</p>
-          </div>
-          <div className={styles.teamCard}>
-            <div className={styles.avatarWrapper}>
-              <img src="team_empty.png" alt="😅" className={styles.avatar} />
-            </div>
-            <p className={styles.avatarName}>Имяяяяяяяя Фамилияяяя</p>
-            <p className={styles.avatarTitle}>Должность</p>
-          </div>
-          <div className={styles.teamCard}>
-            <div className={styles.avatarWrapper}>
-              <img src="team_empty.png" alt="😅" className={styles.avatar} />
-            </div>
-            <p className={styles.avatarName}>Имяяяяяяяяя Фамилияяяяя</p>
-            <p className={styles.avatarTitle}>Должность</p>
-          </div>
+          <p className={styles.avatarName}>{member.name}</p>
+          <p className={styles.avatarTitle}>{member.title}</p>
+        </div>
+      ))}
         </div>
         <div className={styles.centerBtnWrapper}>
-          <Button size="large" disabled>
+          <Button size="large" href={URL_BECOME_VOLUNTEER}>
             Стать частью команды
           </Button>
         </div>
@@ -219,28 +155,18 @@ export default function Home() {
       <section id="faq" className={styles.faqSection}>
         <h1>Часто задаваемые вопросы</h1>
         <div className="NotImplemented">
-          <FAQ items={faqData} />
+          <FAQ items={FAQ_DATA} />
         </div>
       </section>
 
       <section id="docs" className={styles.docsSection}>
         <h1>Документы и реквизиты</h1>
         <div className={styles.docsList}>
-          <HashLink className={`${styles.docItem} NotImplemented`} href="#">
-            <DocIcon /> Устав фонда
-          </HashLink>
-          <HashLink className={`${styles.docItem} NotImplemented`} href="#">
-            <DocIcon /> Публичная оферта
-          </HashLink>
-          <HashLink className={`${styles.docItem} NotImplemented`} href="#">
-            <DocIcon /> Свидетельство о регистрации
-          </HashLink>
-          <HashLink className={`${styles.docItem} NotImplemented`} href="#">
-            <DocIcon /> Свидетельство налогоплательщика
-          </HashLink>
-          <HashLink className={`${styles.docItem} NotImplemented`} href="#">
-            <DocIcon /> Свидетельство о регистрации юридического лица
-          </HashLink>
+          {DOCUMENTS.map((doc) => (
+            <HashLink key={doc.id} className={styles.docItem} to={doc.url}>
+              <DocIcon /> {doc.title}
+            </HashLink>
+          ))}
         </div>
         <div className={styles.qrWrapper}>
           <HashLink to='/help'>
@@ -261,28 +187,23 @@ export default function Home() {
           </div>
           <div className={styles.contactsInfo}>
             <p className={styles.contactsTitle}>Адрес:</p>
-            <p className="NotImplemented">Где-то там далеко...</p>
+            <p className="NotImplemented">{CONTACT_INFO.address}</p>
+            
             <p className={styles.contactsTitle}>Телефон:</p>
-            <p className="NotImplemented">88001234567</p>
+            <p className="NotImplemented">{CONTACT_INFO.phone}</p>
+            
             <p className={styles.contactsTitle}>Социальные сети:</p>
             <ul>
-              <li>
-                <HashLink to="#" className="NotImplemented">
-                  Кофе
-                </HashLink>
-              </li>
-              <li>
-                <HashLink to="#" className="NotImplemented">
-                  Чай
-                </HashLink>
-              </li>
-              <li>
-                <HashLink to="#" className="NotImplemented">
-                  Молоко
-                </HashLink>
-              </li>
+              {SOCIAL_LINKS.map((link) => (
+                <li key={link.id}>
+                  <HashLink to={link.url} className="NotImplemented">
+                    {link.name}
+                  </HashLink>
+                </li>
+              ))}
             </ul>
-            <Button disabled>Присоединиться</Button>
+            
+            <Button href={URL_BECOME_VOLUNTEER}>Присоединиться</Button>
           </div>
         </div>
       </section>
