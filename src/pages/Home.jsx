@@ -97,7 +97,7 @@ export default function Home() {
           <div className={styles.helpCard}>
             <p className={styles.helpCardTitle}>Стать хозяином</p>
             <p>Все наши питомцы здоровы, привиты и стерилизованы</p>
-            <Button href={URL_TO_TAKE('owner')}>Узнать подробнее</Button>
+            <Button href="/help#owner">Узнать подробнее</Button>
           </div>
           <div className={styles.helpCard}>
             <p className={styles.helpCardTitle}>Взять на передержку</p>
@@ -105,7 +105,7 @@ export default function Home() {
               Не уверены, что готовы к кошке насовсем? Передержка — идеальный способ
               проверить себя и сделать большое дело
             </p>
-            <Button href={URL_TO_TAKE('overexposure')}>Узнать подробнее</Button>
+            <Button href="/help#overexposure">Узнать подробнее</Button>
           </div>
         </div>
       </section>
@@ -171,11 +171,6 @@ export default function Home() {
         <div className={styles.qrWrapper}>
           <HashLink to='/help'>
             <img src="help_qr.png" alt="Пожертвования" className={styles.qrImage} />
-          </HashLink>
-        </div>
-        <div className={styles.qrWrapper}>
-          <HashLink className={styles.docItem} href="/help">
-            <DocIcon /> Реквизиты для пожертвований
           </HashLink>
         </div>
       </section>
