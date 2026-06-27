@@ -12,6 +12,12 @@
   flex: 0 0 auto;
   height: auto;
   min-height: min-content;
+  align-self: center;
+  flex: 0 0 auto;
+  height: fit-content; 
+  min-height: min-content;
+  box-sizing: border-box; 
+  line-height: 1.2;
 }
 
 .primary {

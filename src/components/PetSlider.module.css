@@ -1,0 +1,199 @@
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.emptyMedia {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-gray-100);
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-300);
+}
+
+.mainImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-gray-100);
+  border-radius: 2rem;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 2;
+}
+
+.navBtn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.prevBtn { left: 1rem; }
+.nextBtn { right: 1rem; }
+
+.thumbnailsContainer {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  min-width: 0;
+  scrollbar-width: thin;
+}
+
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.activeThumbnail {
+  border-color: var(--color-primary);
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 100%;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-inverse);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.modalPrevBtn { left: -1rem; }
+.modalNextBtn { right: -1rem; }
+
+@media (max-width: 768px) {
+  .navBtn {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  
+  .navBtn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .prevBtn { left: 0.5rem; }
+  .nextBtn { right: 0.5rem; }
+
+  .modalPrevBtn { left: 0.5rem; }
+  .modalNextBtn { right: 0.5rem; }
+  
+  .closeBtn {
+    top: -2.2rem;
+    right: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBtn {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .navBtn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .prevBtn { left: 0.25rem; }
+  .nextBtn { right: 0.25rem; }
+
+  .modalPrevBtn { left: 0.25rem; }
+  .modalNextBtn { right: 0.25rem; }
+
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .emptyMedia {
+    border-radius: 1rem;
+  }
+
+  .mainImageWrapper {
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .navBtn {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .navBtn svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+}
