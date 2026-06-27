@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     width: 100%;
+    min-width: 100px;
     max-width: 360px;
 }
 
@@ -12,7 +13,7 @@
     background-color: var(--color-gray-100);
     border-radius: 1rem;
     width: 100%;
-    min-width: 200px;
+    min-width: 100px;
     max-width: 360px;
     aspect-ratio: 3 / 4;
     overflow: hidden;
@@ -43,6 +44,7 @@
 
 .specifications {
     font-size: 0.8rem;
+    color: var(--color-text-muted);
     padding: 0;
     margin: 0;
 }
@@ -58,4 +60,28 @@
     overflow: hidden;
     
     line-clamp: 3; 
+}
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 1rem;
+    }
+    .specifications {
+        font-size: 0.8rem;
+    }
+    .description {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .name {
+        font-size: 0.8rem;
+    }
+    .specifications {
+        font-size: 0.7rem;
+    }
+    .description {
+        font-size: 0.7rem;
+    }
 }

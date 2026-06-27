@@ -9,6 +9,9 @@
   border: 3px solid transparent;
   border-color: var(--color-primary);
   text-decoration: none;
+  flex: 0 0 auto;
+  height: auto;
+  min-height: min-content;
 }
 
 .primary {
@@ -40,4 +43,17 @@
   padding: 0.6rem 1.2rem;
   font-size: 1.2rem;
   border-radius: 1.8rem;
+}
+
+@media (max-width: 768px)  {
+  .normal {
+    padding: 0.35rem;
+    font-size: 0.7rem;
+    border-radius: 1.2rem;
+  }
+  .large {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 1.8rem;
+  }
 }

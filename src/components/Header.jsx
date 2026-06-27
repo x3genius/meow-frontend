@@ -52,7 +52,6 @@ export default function Header() {
             </div>
             <div className={styles.icons}>
               {/* <HashLink to="#" className="NotImplemented">
-              {/* <HashLink to="#" className="NotImplemented">
                 <VkIcon />
               </HashLink> */}
               <HashLink to="https://t.me/meowcenterr">

@@ -62,6 +62,17 @@ export const SOCIAL_LINKS = [
   { id: 3, name: "Молоко", url: "#" },
 ];
 
+export const PAY_DATA_HEADER = "Реквизиты счета в"
+export const PAY_DATA = [
+  "Некоммерческая организация Благотворительный фонд «Мяу-Центр»",
+  "ИНН XXXXXXXXX",
+  "КПП XXXXXXXXX",
+  "БИК XXXXXXXXX",
+  "Р/С XXXXXXXXXXXXXXXXXXX",
+  "К/С XXXXXXXXXXXXXXXXXXX",
+  "в Филиале ",
+]
+
 export const FAQ_DATA = [
     {
       question: 'Является ли «Мяу-центр» официальным Благотворительным фондом?',

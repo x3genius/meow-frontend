@@ -93,7 +93,7 @@
 
 @media (max-width: 768px) {
   .faqQuestion {
-    font-size: 0.95rem;
+    font-size: 0.6rem;
   }
   .faqButton {
     width: 28px;
@@ -104,6 +104,10 @@
     height: 14px;
   }
   .faqAnswer {
-    font-size: 0.85rem;
+    font-size: 0.6rem;
+  }
+  .faqHeader {
+    padding: 0 0.5rem;
+    gap: 1rem;
   }
 }

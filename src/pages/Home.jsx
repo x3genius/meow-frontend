@@ -12,7 +12,9 @@ import {
   FAQ_DATA, 
   DOCUMENTS,
   CONTACT_INFO, 
-  SOCIAL_LINKS
+  SOCIAL_LINKS,
+  PAY_DATA,
+  PAY_DATA_HEADER,
 } from '/src/vars.jsx'
 
 
@@ -173,6 +175,12 @@ export default function Home() {
             <img src="help_qr.png" alt="Пожертвования" className={styles.qrImage} />
           </HashLink>
         </div>
+        <h3>{PAY_DATA_HEADER}</h3>
+        <p className={styles.centerText}>
+          {PAY_DATA.map((item) => (
+            <><span>{item}</span><br /></>
+          ))}
+        </p>
       </section>
       <section id="contacts" className={styles.contactsSection}>
         <h1>Контакты</h1>

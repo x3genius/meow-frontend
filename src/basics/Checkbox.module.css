@@ -60,7 +60,7 @@
   max-width: 100%;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 768px) {
   .label {
     font-size: 0.8rem;
   }

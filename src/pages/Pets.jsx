@@ -78,9 +78,9 @@ export default function Pets() {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width > 1160) {
+      if (width > 750) {
         setItemsPerPage(9);  // 3 cols * 3 rows = 9 cards
-      } else if (width > 768) {
+      } else if (width > 400) {
         setItemsPerPage(8);  // 2 cols * 4 rows = 8 cards
       } else {
         setItemsPerPage(5);  // 1 cols * 5 rows = 5 cards

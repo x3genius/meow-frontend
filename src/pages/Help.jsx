@@ -5,6 +5,8 @@ import {
   VOLOUNTEER_DATA, 
   OWNER_DATA, 
   OVEREXPOSURE_DATA,
+  PAY_DATA_HEADER,
+  PAY_DATA,
 } from '/src/vars.jsx'
 
 
@@ -52,6 +54,12 @@ export default function Help() {
             <img src="help_qr.png" alt="Пожертвования" className={styles.qrImage} />
           </a>
         </div>
+        <h3>{PAY_DATA_HEADER}</h3>
+        <p className={styles.centerText}>
+          {PAY_DATA.map((item) => (
+            <><span>{item}</span><br /></>
+          ))}
+        </p>
       </section>
 
       <section id="volunteer" className={styles.faqSection}>

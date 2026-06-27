@@ -112,6 +112,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .helpCardTitle {
@@ -119,6 +120,16 @@
   font-weight: 500;
   font-size: 1.2rem;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .helpCardTitle {
+    font-size: 0.8rem;
+  }
+
+  .helpGrid {
+    gap: 1rem;
+  }
 }
 
 /* pets-section */
@@ -135,7 +146,7 @@
 
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 0;
@@ -175,20 +186,28 @@
   white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .teamGrid {
-    gap: 0.5rem;
-  }
-  .avatarName {
-    font-size: 1rem;
-  }
-}
-
 .avatarTitle {
   text-align: center;
   color: var(--color-text-muted);
   font-size: 0.8rem;
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  .avatarWrapper {
+    width: 140px;
+    height: 140px;
+  }
+  .teamGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.35rem;
+  }
+  .avatarName {
+    font-size: 0.7rem;
+  }
+  .avatarTitle {
+    font-size: 0.5rem;
+  }
 }
 
 /* faq-section */
@@ -217,6 +236,16 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .docsList {
+    gap: 1rem 2rem;
+  }
+  .docItem {
+    gap: 0.35rem;
+    font-size: 0.7rem;
+  }
 }
 
 .docItem svg {
@@ -298,5 +327,9 @@
 
   .mapBlock {
     height: 300px;
+  }
+
+  .contactsTitle {
+    font-size: 0.7rem;
   }
 }

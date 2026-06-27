@@ -79,3 +79,14 @@
 .textMain {
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .trigger {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .menuItem {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
