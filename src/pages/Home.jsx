@@ -6,6 +6,9 @@ import PetsRandom from '/src/components/PetsRandom.jsx';
 import ContactMap from '/src/components/ContactMap.jsx';
 import styles from './Home.module.css';
 import DocIcon from '/src/assets/doc.svg?react';
+import PawHomeAbout from '/src/assets/paws/PawHomeAbout.svg?react';
+import PawHomeTeam from '/src/assets/paws/PawHomeTeam.svg?react';
+import PawHomeDocs from '/src/assets/paws/PawHomeDocs.svg?react';
 import {
   URL_TO_TAKE,
   URL_BECOME_VOLUNTEER,
@@ -72,6 +75,7 @@ export default function Home() {
           громких слов и звёзд с неба. Просто каждый день делаем то, что считаем
           правильным: спасаем тех, кому нужна помощь, но не может о ней попросить»
         </p>
+        <PawHomeAbout className={styles.pawHomeAbout}/>
       </section>
 
       <section id="help" className={styles.helpSection}>
@@ -121,6 +125,8 @@ export default function Home() {
       </section>
 
       <section id="team" className={styles.teamSection}>
+        <PawHomeTeam className={styles.pawHomeTeam}/>
+
         <h1>Наша команда</h1>
         <p className={styles.centerText}>
           Лица нашего Благотворительного фонда «Мяу-Центр»
@@ -171,6 +177,8 @@ export default function Home() {
             </Fragment>
           ))}
         </p>
+
+        <PawHomeDocs className={styles.pawHomeDocs}/>
       </section>
       <section id="contacts" className={styles.contactsSection}>
         <h1>Контакты</h1>

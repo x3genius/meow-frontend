@@ -3,6 +3,7 @@ import Select from '/src/basics/Select.jsx';
 import Checkbox from '/src/basics/Checkbox.jsx';
 import PetCard from '/src/components/PetCard.jsx';
 import styles from './Pets.module.css';
+import PawPets from '/src/assets/paws/PawPets.svg?react';
 import { URL_TO_TAKE, GENDER_OPTIONS, AGE_OPTIONS } from '/src/vars.jsx';
 
 export default function Pets() {
@@ -223,6 +224,8 @@ export default function Pets() {
           )}
         </div>
       )}
+
+      <PawPets className={styles.pawPets}/>
     </div>
   );
 }

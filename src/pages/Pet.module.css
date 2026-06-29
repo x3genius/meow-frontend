@@ -3,6 +3,7 @@
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 1rem;
+  position: relative;
 }
 
 .petContainer {
@@ -52,6 +53,20 @@
   justify-content: center;
 }
 
+.pawPet {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  bottom: -30%;
+  width: 99vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 @media (max-width: 768px) {
   .petContainer {
     grid-template-columns: 1fr;
@@ -82,5 +97,9 @@
   .description {
     text-align: left;
     font-size: 0.8rem !important;
+  }
+
+  .pawPet {
+    bottom: -40%;
   }
 }

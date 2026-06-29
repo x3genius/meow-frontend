@@ -3,6 +3,8 @@ import { Fragment } from 'react';
 import Button from '/src/basics/Button.jsx';
 import FAQ from '/src/basics/FAQ.jsx';
 import styles from './Help.module.css';
+import PawHelpHelp from '/src/assets/paws/PawHelpHelp.svg?react';
+import PawHelpOwner from '/src/assets/paws/PawHelpOwner.svg?react';
 import {
   VOLOUNTEER_DATA,
   OWNER_DATA,
@@ -29,6 +31,8 @@ export default function Help() {
             Взять на передержку
           </Button>
         </div>
+
+        <PawHelpHelp className={styles.pawHelpHelp}/>
       </section>
 
       <section id="help" className={styles.aboutSection}>
@@ -69,6 +73,8 @@ export default function Help() {
         <h1>Стать хозяином</h1>
         <p className={styles.centerText}>Общее описание процесса становления...</p>
         <FAQ items={OWNER_DATA} />
+
+        <PawHelpOwner className={styles.pawHelpOwner}/>
       </section>
 
       <section id="overexposure" className={styles.faqSection}>

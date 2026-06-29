@@ -2,6 +2,7 @@
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 1rem;
+  position: relative;
 }
 
 .filtersWrapper {
@@ -92,4 +93,18 @@
 
 .infoMessage {
   text-align: center;
+}
+
+.pawPets {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  bottom: -12%;
+  width: 99vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }

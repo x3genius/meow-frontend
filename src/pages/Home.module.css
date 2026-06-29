@@ -89,6 +89,21 @@
 
 .aboutSection {
   padding-block: 2rem;
+  position: relative;
+}
+
+.pawHomeAbout {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  bottom: -100%;
+  width: 99vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* help-section */
@@ -142,6 +157,21 @@
 
 .teamSection {
   padding-block: 2rem;
+  position: relative;
+}
+
+.pawHomeTeam {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  top: -30%;
+  width: 99vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .teamGrid {
@@ -182,7 +212,6 @@
   font-size: 1.2rem;
   margin: 0;
   word-break: break-word;
-  /* white-space: nowrap; */
 }
 
 .avatarTitle {
@@ -232,6 +261,21 @@
 
 .docsSection {
   padding-block: 2rem;
+  position: relative;
+}
+
+.pawHomeDocs {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  bottom: 0;
+  width: 99vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .docsList {
@@ -268,15 +312,15 @@
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+  padding: 60px;
 }
 
 .qrImage {
   width: 300px;
-  height: 300px;
+  height: auto;
   max-width: 100%;
   object-fit: contain;
   background-color: var(--color-inverse);
-  padding: 10px;
   border-radius: 2rem;
   padding: 0;
   display: block;

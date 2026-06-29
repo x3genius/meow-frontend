@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Button from '/src/basics/Button.jsx';
 import PetSlider from '/src/components/PetSlider.jsx';
 import styles from './Pet.module.css';
+import PawPet from '/src/assets/paws/PawPet.svg?react';
 import { GENDER_ENUM, URL_TO_TAKE } from '/src/vars.jsx';
 
 export default function Pet() {
@@ -73,6 +74,8 @@ export default function Pet() {
         <Button href={URL_TO_TAKE('owner', pet.name)}>Стать хозяином</Button>
         <Button href={URL_TO_TAKE('overexposure', pet.name)}>Взять на передержку</Button>
       </div>
+
+      <PawPet className={styles.pawPet}/>
     </div>
   );
 }
