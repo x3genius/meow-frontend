@@ -9,6 +9,16 @@
     max-width: 360px;
 }
 
+.cardLink {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.centerText {
+    text-align: center;
+}
+
 .imageWrapper {
     background-color: var(--color-gray-100);
     border-radius: 1rem;

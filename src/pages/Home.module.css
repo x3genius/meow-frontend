@@ -146,11 +146,12 @@
 
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 0;
   justify-content: center;
+  align-items: start;
 }
 
 .teamCard {
@@ -158,14 +159,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 320px; 
   width: 100%;
-  margin-inline: auto;
 }
 
 .avatarWrapper {
-  width: 160px;
-  height: 160px;
+  width: 8rem;
+  height: 8rem;
   margin-bottom: 1rem;
 }
 
@@ -182,8 +181,8 @@
   font-weight: 500;
   font-size: 1.2rem;
   margin: 0;
-
-  white-space: nowrap;
+  word-break: break-word;
+  /* white-space: nowrap; */
 }
 
 .avatarTitle {
@@ -193,18 +192,31 @@
   margin: 0;
 }
 
-@media (max-width: 600px) {
-  .avatarWrapper {
-    width: 140px;
-    height: 140px;
-  }
+@media (max-width: 768px) {
   .teamGrid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 0.35rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
+
+  .teamCard:first-child {
+    grid-column: span 2;
+  }
+
+  .avatarWrapper {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .teamCard:first-child .avatarWrapper {
+    width: 8rem;
+    height: 8rem;
+  }
+
   .avatarName {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
+
   .avatarTitle {
     font-size: 0.5rem;
   }

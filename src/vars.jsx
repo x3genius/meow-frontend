@@ -32,15 +32,15 @@ export const AGE_OPTIONS = [
 ];
 
 export const TEAM_MEMBERS = [
-  { id: 1, name: "Имя Фам", title: "Должность", img: "team_empty.png" },
-  { id: 2, name: "Имяя Фами", title: "Должность", img: "team_empty.png" },
-  { id: 3, name: "Имяяя Фамил", title: "Должность", img: "team_empty.png" },
-  { id: 4, name: "Имяяяя Фамили", title: "Должность", img: "team_empty.png" },
-  { id: 5, name: "Имяяяяя Фамилия", title: "Должность", img: "team_empty.png" },
-  { id: 6, name: "Имяяяяяя Фамилияя", title: "Должность", img: "team_empty.png" },
-  { id: 7, name: "Имяяяяяяя Фамилияяя", title: "Должность", img: "team_empty.png" },
-  { id: 8, name: "Имяяяяяяяя Фамилияяяя", title: "Должность", img: "team_empty.png" },
-  { id: 9, name: "Имяяяяяяяяя Фамилияяяяя", title: "Должность", img: "team_empty.png" },
+  { id: 1, name: "Капкаева Лилия", title: "Должность", img: "team_empty.png" },
+  { id: 2, name: "Меграбян Гарегин", title: "Должность", img: "team_empty.png" },
+  { id: 3, name: "Левченко Людмила", title: "Должность", img: "team_empty.png" },
+  { id: 4, name: "Анастасия", title: "Должность", img: "team_empty.png" },
+  { id: 5, name: "Цветкова Вероника", title: "Должность", img: "team_empty.png" },
+  { id: 6, name: "Олина Ольга", title: "Должность", img: "team_empty.png" },
+  { id: 7, name: "Тюрикова Людмила", title: "Должность", img: "team_empty.png" },
+  { id: 8, name: "Сиксе Светлана", title: "Должность", img: "team_empty.png" },
+  { id: 9, name: "Литвинова Ирина", title: "Должность", img: "team_empty.png" },
 ];
 
 export const DOCUMENTS = [

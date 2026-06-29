@@ -1,0 +1,116 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.carouselContainer {
+    display: none;
+}
+
+.desktopWrapper {
+    display: block;
+}
+
+.gridMode {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.pageBtn, .arrowBtn {
+    background-color: var(--color-bg);
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activePage {
+    color: var(--color-text);
+    text-decoration: underline 2px solid var(--color-primary);
+    text-underline-offset: 0.5rem;
+}
+
+.infoMessage {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .desktopWrapper {
+        display: none;
+    }
+
+    .carouselContainer {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 0.5rem 0;
+        height: auto;
+        overflow: visible;
+    }
+
+    .slide {
+        position: absolute;
+        left: 27.27%;
+        top: 0;
+        width: 45.45%;
+        box-sizing: border-box;
+        pointer-events: none;
+        opacity: 0;
+        z-index: 1;
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                    opacity 0.4s ease, 
+                    z-index 0.4s step-end;
+    }
+
+    .slide.active {
+        position: relative;
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 3;
+        pointer-events: auto;
+    }
+
+    .slide.prev {
+        position: absolute;
+        transform: translateX(-60%) scale(0.85);
+        opacity: 0.4;
+        z-index: 2;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+    .slide.next {
+        position: absolute;
+        transform: translateX(60%) scale(0.85);
+        opacity: 0.4;
+        z-index: 2;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+    .slide.hidden {
+        position: absolute;
+        transform: translateX(0) scale(0.7);
+        opacity: 0;
+        z-index: 1;
+    }
+}

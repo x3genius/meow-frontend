@@ -1,3 +1,4 @@
+import { HashLink } from 'react-router-hash-link';
 import Button from '/src/basics/Button.jsx';
 import styles from './PetCard.module.css';
 import EmptyCard from '/src/assets/empty.svg?react'
@@ -6,7 +7,7 @@ import {
 } from '/src/vars.jsx'
 
 
-export default function PetCard({ children, data, ...props }) {
+export default function PetCard({ children, data, short=false, ...props }) {
   const pet_id = data?.id || 0
   const normalizedData = {
     id: pet_id,
@@ -19,31 +20,39 @@ export default function PetCard({ children, data, ...props }) {
 
   return (
     <div className={styles.card} {...props}>
-      <div className={styles.imageWrapper}>
-        { 
-          normalizedData.photos[0]?.image
-          ?
-          <img 
-            src={normalizedData.photos[0].image} 
-            alt={normalizedData.name} 
-          /> 
-          :
-          <EmptyCard style={{width: '100%', height: '100%'}}/>
-        }
-      </div>
-      <div className={styles.infoWrapper}>
-        <p className={styles.name}>{normalizedData.name}</p>
-        <p className={styles.specifications}>
-          {normalizedData.gender} / {normalizedData.age}
-        </p>
-        <p className={styles.description}>{normalizedData.description}</p>
-      </div>
-      <Button 
-        href={data ? `/pets/${normalizedData.id}` : undefined} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        disabled={!data}
-      >Узнать подробнее</Button>
+      <HashLink className={styles.cardLink} to={short ? (data ? `/pets/${normalizedData.id}` : undefined) : undefined}>
+        <div className={styles.imageWrapper}>
+          { 
+            normalizedData.photos[0]?.image
+            ?
+            <img 
+              src={normalizedData.photos[0].image} 
+              alt={normalizedData.name} 
+            /> 
+            :
+            <EmptyCard style={{width: '100%', height: '100%'}}/>
+          }
+        </div>
+        <div className={styles.infoWrapper}>
+          <p className={`${styles.name} ${short ? styles.centerText : ''}`}>
+            {normalizedData.name}
+          </p>
+          <p className={`${styles.specifications} ${short ? styles.centerText : ''}`}>
+            {normalizedData.gender} / {normalizedData.age}
+          </p>
+          {!short && (
+            <p className={styles.description}>{normalizedData.description}</p>
+          )}
+        </div>
+      </HashLink>
+      {!short && (
+        <Button 
+          href={data ? `/pets/${normalizedData.id}` : undefined} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          disabled={!data}
+        >Узнать подробнее</Button>
+      )}
     </div>
   );
 }

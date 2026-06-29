@@ -134,18 +134,18 @@ export default function Home() {
         </p>
         <div className={styles.teamGrid}>
           {TEAM_MEMBERS.map((member) => (
-        <div key={member.id} className={styles.teamCard}>
-          <div className={styles.avatarWrapper}>
-            <img 
-              src={member.img} 
-              alt={member.name} 
-              className={styles.avatar} 
-            />
-          </div>
-          <p className={styles.avatarName}>{member.name}</p>
-          <p className={styles.avatarTitle}>{member.title}</p>
-        </div>
-      ))}
+            <div key={member.id} className={styles.teamCard}>
+              <div className={styles.avatarWrapper}>
+                <img 
+                  src={member.img} 
+                  alt={member.name} 
+                  className={styles.avatar} 
+                />
+              </div>
+              <p className={styles.avatarName}>{member.name}</p>
+              <p className={styles.avatarTitle}>{member.title}</p>
+            </div>
+          ))}
         </div>
         <div className={styles.centerBtnWrapper}>
           <Button size="large" href={URL_BECOME_VOLUNTEER}>
