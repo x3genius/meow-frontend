@@ -71,16 +71,16 @@
 @media (max-width: 500px) {
   .petName {
     text-align: center;
-    font-size: 1rem !important; 
+    font-size: 1rem !important;
   }
 
   .specifications {
     text-align: center;
-    font-size: 0.8rem !important; 
+    font-size: 0.8rem !important;
   }
 
   .description {
     text-align: left;
-    font-size: 0.8rem !important; 
+    font-size: 0.8rem !important;
   }
 }

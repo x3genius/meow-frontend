@@ -14,9 +14,9 @@
   min-height: min-content;
   align-self: center;
   flex: 0 0 auto;
-  height: fit-content; 
+  height: fit-content;
   min-height: min-content;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   line-height: 1.2;
 }
 
@@ -51,7 +51,7 @@
   border-radius: 1.8rem;
 }
 
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
   .normal {
     padding: 0.35rem;
     font-size: 0.7rem;

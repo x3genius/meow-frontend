@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import Button from '/src/basics/Button.jsx';
 import FAQ from '/src/basics/FAQ.jsx';
@@ -5,27 +6,19 @@ import PetsRandom from '/src/components/PetsRandom.jsx';
 import ContactMap from '/src/components/ContactMap.jsx';
 import styles from './Home.module.css';
 import DocIcon from '/src/assets/doc.svg?react';
-import { 
-  URL_TO_TAKE, 
-  URL_BECOME_VOLUNTEER, 
+import {
+  URL_TO_TAKE,
+  URL_BECOME_VOLUNTEER,
   TEAM_MEMBERS,
-  FAQ_DATA, 
+  FAQ_DATA,
   DOCUMENTS,
-  CONTACT_INFO, 
+  CONTACT_INFO,
   SOCIAL_LINKS,
   PAY_DATA,
   PAY_DATA_HEADER,
-} from '/src/vars.jsx'
-
+} from '/src/vars.jsx';
 
 export default function Home() {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
     <>
       <section className={styles.heroSection}>
@@ -38,7 +31,7 @@ export default function Home() {
             <p className={styles.heroSubtitle}>
               «Спасая животное, мы спасаем человека внутри себя»
             </p>
-            <Button size="large" onClick={() => scrollToSection('about')}>
+            <Button size="large" href="#about">
               Узнать подробнее
             </Button>
           </div>
@@ -47,22 +40,22 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.heroTags}>
-          <Button variant="inverted" onClick={() => scrollToSection('help')}>
+          <Button variant="inverted" href="#help">
             Помощь центру
           </Button>
-          <Button variant="inverted" onClick={() => scrollToSection('pets')}>
+          <Button variant="inverted" href="#pets">
             Наши питомцы
           </Button>
-          <Button variant="inverted" onClick={() => scrollToSection('team')}>
+          <Button variant="inverted" href="#team">
             Наша команда
           </Button>
-          <Button variant="inverted" onClick={() => scrollToSection('faq')}>
+          <Button variant="inverted" href="#faq">
             Ответы на вопросы
           </Button>
-          <Button variant="inverted" onClick={() => scrollToSection('docs')}>
+          <Button variant="inverted" href="#docs">
             Документы
           </Button>
-          <Button variant="inverted" onClick={() => scrollToSection('contacts')}>
+          <Button variant="inverted" href="#contacts">
             Контакты
           </Button>
         </div>
@@ -136,11 +129,7 @@ export default function Home() {
           {TEAM_MEMBERS.map((member) => (
             <div key={member.id} className={styles.teamCard}>
               <div className={styles.avatarWrapper}>
-                <img 
-                  src={member.img} 
-                  alt={member.name} 
-                  className={styles.avatar} 
-                />
+                <img src={member.img} alt={member.name} className={styles.avatar} />
               </div>
               <p className={styles.avatarName}>{member.name}</p>
               <p className={styles.avatarTitle}>{member.title}</p>
@@ -156,9 +145,7 @@ export default function Home() {
 
       <section id="faq" className={styles.faqSection}>
         <h1>Часто задаваемые вопросы</h1>
-        <div className="NotImplemented">
-          <FAQ items={FAQ_DATA} />
-        </div>
+        <FAQ items={FAQ_DATA} />
       </section>
 
       <section id="docs" className={styles.docsSection}>
@@ -171,14 +158,17 @@ export default function Home() {
           ))}
         </div>
         <div className={styles.qrWrapper}>
-          <HashLink to='/help'>
+          <HashLink to="/help">
             <img src="help_qr.png" alt="Пожертвования" className={styles.qrImage} />
           </HashLink>
         </div>
         <h3>{PAY_DATA_HEADER}</h3>
         <p className={styles.centerText}>
-          {PAY_DATA.map((item) => (
-            <><span>{item}</span><br /></>
+          {PAY_DATA.map((item, index) => (
+            <Fragment key={index}>
+              <span>{item}</span>
+              <br />
+            </Fragment>
           ))}
         </p>
       </section>
@@ -190,22 +180,20 @@ export default function Home() {
           </div>
           <div className={styles.contactsInfo}>
             <p className={styles.contactsTitle}>Адрес:</p>
-            <p className="NotImplemented">{CONTACT_INFO.address}</p>
-            
+            <p>{CONTACT_INFO.address}</p>
+
             <p className={styles.contactsTitle}>Телефон:</p>
-            <p className="NotImplemented">{CONTACT_INFO.phone}</p>
-            
+            <p>{CONTACT_INFO.phone}</p>
+
             <p className={styles.contactsTitle}>Социальные сети:</p>
             <ul>
               {SOCIAL_LINKS.map((link) => (
                 <li key={link.id}>
-                  <HashLink to={link.url} className="NotImplemented">
-                    {link.name}
-                  </HashLink>
+                  <HashLink to={link.url}>{link.name}</HashLink>
                 </li>
               ))}
             </ul>
-            
+
             <Button href={URL_BECOME_VOLUNTEER}>Присоединиться</Button>
           </div>
         </div>

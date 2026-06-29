@@ -51,10 +51,14 @@ export default function Header() {
               <span className={styles.city}>Санкт-Петербург</span>
             </div>
             <div className={styles.icons}>
-              {/* <HashLink to="#" className="NotImplemented">
+              {/* <HashLink to="#" target="_blank" rel="noopener noreferrer">
                 <VkIcon />
               </HashLink> */}
-              <HashLink to="https://t.me/meowcenterr">
+              <HashLink
+                to="https://t.me/meowcenterr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <TgIcon />
               </HashLink>
             </div>

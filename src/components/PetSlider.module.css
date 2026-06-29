@@ -56,8 +56,12 @@
   background-color: var(--color-primary-hover);
 }
 
-.prevBtn { left: 1rem; }
-.nextBtn { right: 1rem; }
+.prevBtn {
+  left: 1rem;
+}
+.nextBtn {
+  right: 1rem;
+}
 
 .thumbnailsContainer {
   display: flex;
@@ -124,26 +128,38 @@
   padding: 0;
 }
 
-.modalPrevBtn { left: -1rem; }
-.modalNextBtn { right: -1rem; }
+.modalPrevBtn {
+  left: -1rem;
+}
+.modalNextBtn {
+  right: -1rem;
+}
 
 @media (max-width: 768px) {
   .navBtn {
     width: 2.2rem;
     height: 2.2rem;
   }
-  
+
   .navBtn svg {
     width: 18px;
     height: 18px;
   }
 
-  .prevBtn { left: 0.5rem; }
-  .nextBtn { right: 0.5rem; }
+  .prevBtn {
+    left: 0.5rem;
+  }
+  .nextBtn {
+    right: 0.5rem;
+  }
 
-  .modalPrevBtn { left: 0.5rem; }
-  .modalNextBtn { right: 0.5rem; }
-  
+  .modalPrevBtn {
+    left: 0.5rem;
+  }
+  .modalNextBtn {
+    right: 0.5rem;
+  }
+
   .closeBtn {
     top: -2.2rem;
     right: 0.5rem;
@@ -161,11 +177,19 @@
     height: 14px;
   }
 
-  .prevBtn { left: 0.25rem; }
-  .nextBtn { right: 0.25rem; }
+  .prevBtn {
+    left: 0.25rem;
+  }
+  .nextBtn {
+    right: 0.25rem;
+  }
 
-  .modalPrevBtn { left: 0.25rem; }
-  .modalNextBtn { right: 0.25rem; }
+  .modalPrevBtn {
+    left: 0.25rem;
+  }
+  .modalNextBtn {
+    right: 0.25rem;
+  }
 
   .thumbnail {
     width: 50px;

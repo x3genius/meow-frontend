@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './ContactMap.module.css'; 
-import mapHtml from '/src/assets/map.txt?raw'; 
+import styles from './ContactMap.module.css';
+import mapHtml from '/src/assets/map.txt?raw';
 
 const ContactMap = () => {
   return (

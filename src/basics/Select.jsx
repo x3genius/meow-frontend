@@ -1,7 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 import styles from './Select.module.css';
 
-export default function Select({ options = [], value, onChange, placeholder = 'Не выбран', className }) {
+export default function Select({
+  options = [],
+  value,
+  onChange,
+  placeholder = 'Не выбран',
+  className,
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const [menuPosition, setMenuPosition] = useState({});
   const dropdownRef = useRef(null);
@@ -37,19 +43,23 @@ export default function Select({ options = [], value, onChange, placeholder = '�
   };
 
   return (
-    <div className={[styles.container, className].filter(Boolean).join(' ')} ref={dropdownRef}>
-      <button
-        type="button"
-        className={styles.trigger}
-        onClick={() => setIsOpen(!isOpen)}
-      >
+    <div
+      className={[styles.container, className].filter(Boolean).join(' ')}
+      ref={dropdownRef}
+    >
+      <button type="button" className={styles.trigger} onClick={() => setIsOpen(!isOpen)}>
         <span className={!selectedOption ? styles.textMain : ''}>
           {selectedOption ? selectedOption.label : placeholder}
         </span>
-        
-        <svg 
-          className={`${styles.icon} ${isOpen ? styles.iconOpen : ''}`} 
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+
+        <svg
+          className={`${styles.icon} ${isOpen ? styles.iconOpen : ''}`}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>

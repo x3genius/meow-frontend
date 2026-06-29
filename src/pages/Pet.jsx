@@ -3,10 +3,7 @@ import { useParams } from 'react-router-dom';
 import Button from '/src/basics/Button.jsx';
 import PetSlider from '/src/components/PetSlider.jsx';
 import styles from './Pet.module.css';
-import { 
-  GENDER_ENUM,
-  URL_TO_TAKE,
-} from '/src/vars.jsx';
+import { GENDER_ENUM, URL_TO_TAKE } from '/src/vars.jsx';
 
 export default function Pet() {
   const { id } = useParams();
@@ -16,7 +13,7 @@ export default function Pet() {
 
   useEffect(() => {
     let isMounted = true;
-    
+
     const fetchPet = async () => {
       try {
         setLoading(true);
@@ -25,15 +22,17 @@ export default function Pet() {
         const data = await response.json();
         if (isMounted) setPet(data);
       } catch (err) {
-        console.error("Failed to fetch pet data:", err);
-        if (isMounted) setError("Не удалось загрузить данные о питомце.");
+        console.error('Failed to fetch pet data:', err);
+        if (isMounted) setError('Не удалось загрузить данные о питомце.');
       } finally {
         if (isMounted) setLoading(false);
       }
     };
 
     fetchPet();
-    return () => { isMounted = false; };
+    return () => {
+      isMounted = false;
+    };
   }, [id]);
 
   if (loading) return <div className={styles.petPage}>Загрузка...</div>;
@@ -48,7 +47,7 @@ export default function Pet() {
         <div className={styles.petMedia}>
           <PetSlider photos={pet.photos} />
         </div>
-        
+
         <div className={styles.petInfo}>
           <h1 className={styles.petName}>{pet.name}</h1>
           <p className={styles.specifications}>
@@ -58,7 +57,9 @@ export default function Pet() {
             <p className={styles.specifications}>
               Требует особого внимания и любви: питомец с особенностями здоровья.
             </p>
-          ) : <></>}
+          ) : (
+            <></>
+          )}
           <p className={styles.description}>{pet.description}</p>
         </div>
       </div>

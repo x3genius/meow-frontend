@@ -1,37 +1,31 @@
+import { HashLink } from 'react-router-hash-link';
+import { Fragment } from 'react';
 import Button from '/src/basics/Button.jsx';
 import FAQ from '/src/basics/FAQ.jsx';
 import styles from './Help.module.css';
-import { 
-  VOLOUNTEER_DATA, 
-  OWNER_DATA, 
+import {
+  VOLOUNTEER_DATA,
+  OWNER_DATA,
   OVEREXPOSURE_DATA,
   PAY_DATA_HEADER,
   PAY_DATA,
-} from '/src/vars.jsx'
-
+} from '/src/vars.jsx';
 
 export default function Help() {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
     <>
       <section className={styles.heroSection}>
         <div className={styles.heroTags}>
-          <Button variant="inverted" onClick={() => scrollToSection('help')}>
+          <Button variant="inverted" href="#help">
             Финансовая помощь
           </Button>
-          <Button variant="inverted" onClick={() => scrollToSection('volunteer')}>
+          <Button variant="inverted" href="#volunteer">
             Стать волонтёром
           </Button>
-          <Button variant="inverted" onClick={() => scrollToSection('owner')}>
+          <Button variant="inverted" href="#owner">
             Стать хозяином
           </Button>
-          <Button variant="inverted" onClick={() => scrollToSection('overexposure')}>
+          <Button variant="inverted" href="#overexposure">
             Взять на передержку
           </Button>
         </div>
@@ -45,51 +39,42 @@ export default function Help() {
           заканчиваются.
         </p>
         <p className={styles.centerText}>
-          <a href="#" className={`${styles.helpDonate} NotImplemented`}>
+          <HashLink href="#" className={styles.helpDonate}>
             Вот как вы можете помочь прямо сейчас:
-          </a>
+          </HashLink>
         </p>
         <div className={styles.qrWrapper}>
-          <a href="#" className="NotImplemented">
+          <HashLink to="#">
             <img src="help_qr.png" alt="Пожертвования" className={styles.qrImage} />
-          </a>
+          </HashLink>
         </div>
         <h3>{PAY_DATA_HEADER}</h3>
         <p className={styles.centerText}>
-          {PAY_DATA.map((item) => (
-            <><span>{item}</span><br /></>
+          {PAY_DATA.map((item, index) => (
+            <Fragment key={index}>
+              <span>{item}</span>
+              <br />
+            </Fragment>
           ))}
         </p>
       </section>
 
       <section id="volunteer" className={styles.faqSection}>
         <h1>Стать волонтёром</h1>
-        <p className={`${styles.centerText} NotImplemented`}>
-          Общее описание процесса становления...
-        </p>
-        <div className="NotImplemented">
-          <FAQ items={VOLOUNTEER_DATA} />
-        </div>
+        <p className={styles.centerText}>Общее описание процесса становления...</p>
+        <FAQ items={VOLOUNTEER_DATA} />
       </section>
 
       <section id="owner" className={styles.faqSection}>
         <h1>Стать хозяином</h1>
-        <p className={`${styles.centerText} NotImplemented`}>
-          Общее описание процесса становления...
-        </p>
-        <div className="NotImplemented">
-          <FAQ items={OWNER_DATA} />
-        </div>
+        <p className={styles.centerText}>Общее описание процесса становления...</p>
+        <FAQ items={OWNER_DATA} />
       </section>
 
       <section id="overexposure" className={styles.faqSection}>
         <h1>Взять на передержку</h1>
-        <p className={`${styles.centerText} NotImplemented`}>
-          Общее описание процесса становления...
-        </p>
-        <div className="NotImplemented">
-          <FAQ items={OVEREXPOSURE_DATA} />
-        </div>
+        <p className={styles.centerText}>Общее описание процесса становления...</p>
+        <FAQ items={OVEREXPOSURE_DATA} />
       </section>
     </>
   );

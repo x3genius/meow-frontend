@@ -48,38 +48,7 @@ body {
   overflow-y: auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-headers);
-  font-weight: 500;
-  line-height: 110%;
-  text-align: center;
-  margin-inline: auto;
-}
-
-p {
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-
-@media (max-width: 768px) {
-  p {
-    font-size: 0.7rem;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 1rem;
-  }
-}
+/* CONTAINER */
 
 .container {
   max-width: 1160px; /* 1440px - 280px */
@@ -99,14 +68,7 @@ main.container {
   width: 100%;
 }
 
-.NotImplemented {
-  color: red;
-  background-color: rgb(255, 249, 88);
-}
-
-button:disabled {
-  border-color: red;
-}
+/* SCROLL */
 
 ::-webkit-scrollbar {
   width: 6px;

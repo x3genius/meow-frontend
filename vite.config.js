@@ -15,7 +15,11 @@ export default defineConfig({
       '/api': {
         target: 'https://meow-center.ru/',
         changeOrigin: true,
-      }
+      },
+      '/media': {
+        target: 'https://meow-center.ru/',
+        changeOrigin: true,
+      },
     }
   },
   preview: {

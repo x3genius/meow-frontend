@@ -2,13 +2,31 @@ import { useState, useEffect } from 'react';
 import styles from './PetSlider.module.css';
 
 const ArrowLeft = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-bg)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="var(--color-bg)"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M15 18l-6-6 6-6" />
   </svg>
 );
 
 const ArrowRight = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-bg)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="var(--color-bg)"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M9 18l6-6-6-6" />
   </svg>
 );
@@ -23,7 +41,9 @@ export default function PetSlider({ photos = [] }) {
     } else {
       document.body.style.overflow = 'unset';
     }
-    return () => { document.body.style.overflow = 'unset'; };
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isModalOpen]);
 
   if (!photos || photos.length === 0) {
@@ -47,7 +67,7 @@ export default function PetSlider({ photos = [] }) {
   };
 
   const openModal = () => setIsModalOpen(true);
-  
+
   const closeModal = (e) => {
     if (e.target === e.currentTarget) setIsModalOpen(false);
   };
@@ -56,7 +76,7 @@ export default function PetSlider({ photos = [] }) {
     <div className={styles.sliderContainer}>
       <div className={styles.mainImageWrapper} onClick={openModal}>
         <img src={currentPhoto.image} alt="Pet" className={styles.mainImage} />
-        
+
         {photos.length > 1 && (
           <>
             <button className={`${styles.navBtn} ${styles.prevBtn}`} onClick={handlePrev}>
@@ -86,15 +106,28 @@ export default function PetSlider({ photos = [] }) {
       {isModalOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
           <div className={styles.modalContent}>
-            <button className={styles.closeBtn} onClick={() => setIsModalOpen(false)}>&#10006;</button>
-            <img src={currentPhoto.image} alt="Pet Enlarge" className={styles.modalImage} onClick={(e) => e.stopPropagation()}/>
-            
+            <button className={styles.closeBtn} onClick={() => setIsModalOpen(false)}>
+              &#10006;
+            </button>
+            <img
+              src={currentPhoto.image}
+              alt="Pet Enlarge"
+              className={styles.modalImage}
+              onClick={(e) => e.stopPropagation()}
+            />
+
             {photos.length > 1 && (
               <>
-                <button className={`${styles.navBtn} ${styles.modalPrevBtn}`} onClick={handlePrev}>
+                <button
+                  className={`${styles.navBtn} ${styles.modalPrevBtn}`}
+                  onClick={handlePrev}
+                >
                   <ArrowLeft />
                 </button>
-                <button className={`${styles.navBtn} ${styles.modalNextBtn}`} onClick={handleNext}>
+                <button
+                  className={`${styles.navBtn} ${styles.modalNextBtn}`}
+                  onClick={handleNext}
+                >
                   <ArrowRight />
                 </button>
               </>

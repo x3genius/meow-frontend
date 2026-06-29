@@ -3,12 +3,7 @@ import Select from '/src/basics/Select.jsx';
 import Checkbox from '/src/basics/Checkbox.jsx';
 import PetCard from '/src/components/PetCard.jsx';
 import styles from './Pets.module.css';
-import { 
-  URL_TO_TAKE, 
-  GENDER_OPTIONS,
-  AGE_OPTIONS,
-} from '/src/vars.jsx'
-
+import { URL_TO_TAKE, GENDER_OPTIONS, AGE_OPTIONS } from '/src/vars.jsx';
 
 export default function Pets() {
   const [isHealthFeatures, setIsHealthFeatures] = useState(false);
@@ -23,13 +18,13 @@ export default function Pets() {
       age_category: ['little', 'adult', 'elderly'][i % 3],
       gender: i % 2 === 0 ? 'male' : 'female',
       health_issues: i % 4 === 0,
-      photos: [] 
-    }))
+      photos: [],
+    })),
   );
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(9);
   const [isMobile, setIsMobile] = useState(false);
@@ -45,21 +40,21 @@ export default function Pets() {
         setError(null);
 
         const response = await fetch('/api/pets/available?format=json');
-        
+
         if (!response.ok) {
           throw new Error(`Server error: ${response.status}`);
         }
-        
+
         const data = await response.json();
-        
+
         if (isMounted) {
-          const results = Array.isArray(data) ? data : (data.results || []);
+          const results = Array.isArray(data) ? data : data.results || [];
           setPets(results);
         }
       } catch (err) {
         if (isMounted) {
-          console.error(err)
-          setError("Не удалось загрузить питомцев.");
+          console.error(err);
+          setError('Не удалось загрузить питомцев.');
         }
       } finally {
         if (isMounted) {
@@ -79,11 +74,11 @@ export default function Pets() {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width > 750) {
-        setItemsPerPage(9);  // 3 cols * 3 rows = 9 cards
+        setItemsPerPage(9); // 3 cols * 3 rows = 9 cards
       } else if (width > 400) {
-        setItemsPerPage(8);  // 2 cols * 4 rows = 8 cards
+        setItemsPerPage(8); // 2 cols * 4 rows = 8 cards
       } else {
-        setItemsPerPage(5);  // 1 cols * 5 rows = 5 cards
+        setItemsPerPage(5); // 1 cols * 5 rows = 5 cards
       }
       setIsMobile(window.innerWidth <= 480);
     };
@@ -97,7 +92,7 @@ export default function Pets() {
     setCurrentPage(1);
   }, [gender, age, isHealthFeatures]);
 
-  const filteredPets = pets.filter(pet => {
+  const filteredPets = pets.filter((pet) => {
     if (gender && pet.gender !== gender) return false;
     if (age && pet.age_category !== age) return false;
     if (isHealthFeatures && !pet.health_issues) return false;
@@ -109,7 +104,7 @@ export default function Pets() {
   function filteredFilteredLength() {
     return filteredPets.length;
   }
-  
+
   useEffect(() => {
     if (currentPage > totalPages && totalPages > 0) {
       setCurrentPage(totalPages);
@@ -123,7 +118,8 @@ export default function Pets() {
   const handlePageChange = (page) => {
     setCurrentPage(page);
     if (containerRef.current) {
-      const offsetTop = containerRef.current.getBoundingClientRect().top + window.scrollY - 20;
+      const offsetTop =
+        containerRef.current.getBoundingClientRect().top + window.scrollY - 20;
       window.scrollTo({ top: offsetTop, behavior: 'smooth' });
     }
   };
@@ -139,7 +135,7 @@ export default function Pets() {
       }
       return [1, currentPage, totalPages];
     }
-    
+
     if (totalPages <= 5) return Array.from({ length: totalPages }, (_, i) => i + 1);
     if (currentPage <= 3) return [1, 2, 3, 4, '...', totalPages];
     if (currentPage >= totalPages - 2) {
@@ -154,45 +150,45 @@ export default function Pets() {
   return (
     <div className={styles.container}>
       <div className={styles.filtersWrapper}>
-        <Select 
+        <Select
           placeholder="Пол"
           options={GENDER_OPTIONS}
           value={gender}
           onChange={(val) => setGender(val)}
         />
-        <Select 
+        <Select
           placeholder="Возраст"
           options={AGE_OPTIONS}
           value={age}
           onChange={(val) => setAge(val)}
         />
-        <Checkbox 
-          checked={isHealthFeatures} 
+        <Checkbox
+          checked={isHealthFeatures}
           onChange={(e) => setIsHealthFeatures(e.target.checked)}
         >
           Особенности здоровья
         </Checkbox>
       </div>
-      {error ? (
-        <p className={styles.infoMessage}> {error} </p>
-      ) : <></>}
+      {error ? <p className={styles.infoMessage}> {error} </p> : <></>}
       {displayedPets.length === 0 ? (
         <p className={styles.infoMessage}>Питомцы с такими параметрами не найдены.</p>
-      ) : <></>}
+      ) : (
+        <></>
+      )}
       <div className={styles.cardsPage}>
         {displayedPets.length > 0 ? (
-          displayedPets.map(pet => (
-            <PetCard key={pet.id} data={pet} />
-          ))
-        ) : <></>}
+          displayedPets.map((pet) => <PetCard key={pet.id} data={pet} />)
+        ) : (
+          <></>
+        )}
       </div>
 
       {!showSkeletons && totalPages > 1 && (
         <div className={styles.pagination}>
           {currentPage > 1 && (
-            <button 
-              className={styles.arrowBtn} 
-              onClick={() => setCurrentPage(prev => prev - 1)}
+            <button
+              className={styles.arrowBtn}
+              onClick={() => setCurrentPage((prev) => prev - 1)}
             >
               &larr;
             </button>
@@ -200,7 +196,11 @@ export default function Pets() {
 
           {paginationRange.map((page, idx) => {
             if (page === '...') {
-              return <span key={`dots-${idx}`} className={styles.dots}>...</span>;
+              return (
+                <span key={`dots-${idx}`} className={styles.dots}>
+                  ...
+                </span>
+              );
             }
             return (
               <button
@@ -214,9 +214,9 @@ export default function Pets() {
           })}
 
           {currentPage < totalPages && (
-            <button 
-              className={styles.arrowBtn} 
-              onClick={() => setCurrentPage(prev => prev + 1)}
+            <button
+              className={styles.arrowBtn}
+              onClick={() => setCurrentPage((prev) => prev + 1)}
             >
               &rarr;
             </button>
