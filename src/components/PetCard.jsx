@@ -22,6 +22,8 @@ export default function PetCard({ children, data, short = false, ...props }) {
       <HashLink
         className={styles.cardLink}
         to={true ? (data ? `/pets/${normalizedData.id}` : undefined) : undefined}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <div className={styles.imageWrapper}>
           {normalizedData.photos[0]?.image ? (

@@ -95,7 +95,7 @@
 .pawHomeAbout {
   position: absolute;
   pointer-events: none;
-  z-index: -1;
+  z-index: -0;
   bottom: -100%;
   width: 99vw;
   left: 50%;

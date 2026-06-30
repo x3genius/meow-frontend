@@ -75,7 +75,7 @@ export default function Home() {
           громких слов и звёзд с неба. Просто каждый день делаем то, что считаем
           правильным: спасаем тех, кому нужна помощь, но не может о ней попросить»
         </p>
-        <PawHomeAbout className={styles.pawHomeAbout}/>
+        <PawHomeAbout className={styles.pawHomeAbout} />
       </section>
 
       <section id="help" className={styles.helpSection}>
@@ -125,7 +125,7 @@ export default function Home() {
       </section>
 
       <section id="team" className={styles.teamSection}>
-        <PawHomeTeam className={styles.pawHomeTeam}/>
+        <PawHomeTeam className={styles.pawHomeTeam} />
 
         <h1>Наша команда</h1>
         <p className={styles.centerText}>
@@ -178,7 +178,7 @@ export default function Home() {
           ))}
         </p>
 
-        <PawHomeDocs className={styles.pawHomeDocs}/>
+        <PawHomeDocs className={styles.pawHomeDocs} />
       </section>
       <section id="contacts" className={styles.contactsSection}>
         <h1>Контакты</h1>

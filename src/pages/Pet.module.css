@@ -57,7 +57,7 @@
   position: absolute;
   pointer-events: none;
   z-index: 0;
-  bottom: -30%;
+  top: 50%;
   width: 99vw;
   left: 50%;
   transform: translateX(-50%);

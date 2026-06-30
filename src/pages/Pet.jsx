@@ -75,7 +75,7 @@ export default function Pet() {
         <Button href={URL_TO_TAKE('overexposure', pet.name)}>Взять на передержку</Button>
       </div>
 
-      <PawPet className={styles.pawPet}/>
+      <PawPet className={styles.pawPet} />
     </div>
   );
 }

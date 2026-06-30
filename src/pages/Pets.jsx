@@ -225,7 +225,7 @@ export default function Pets() {
         </div>
       )}
 
-      <PawPets className={styles.pawPets}/>
+      <PawPets className={styles.pawPets} />
     </div>
   );
 }

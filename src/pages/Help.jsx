@@ -32,7 +32,7 @@ export default function Help() {
           </Button>
         </div>
 
-        <PawHelpHelp className={styles.pawHelpHelp}/>
+        <PawHelpHelp className={styles.pawHelpHelp} />
       </section>
 
       <section id="help" className={styles.aboutSection}>
@@ -74,7 +74,7 @@ export default function Help() {
         <p className={styles.centerText}>Общее описание процесса становления...</p>
         <FAQ items={OWNER_DATA} />
 
-        <PawHelpOwner className={styles.pawHelpOwner}/>
+        <PawHelpOwner className={styles.pawHelpOwner} />
       </section>
 
       <section id="overexposure" className={styles.faqSection}>
