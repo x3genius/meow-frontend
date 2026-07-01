@@ -357,10 +357,6 @@
   margin-bottom: 1.5rem;
 }
 
-.contactsInfo a {
-  text-decoration: none;
-}
-
 .contactsTitle {
   font-family: var(--font-headers);
   font-weight: 500;

@@ -11,7 +11,7 @@ export default function Pets() {
   const [gender, setGender] = useState('');
   const [age, setAge] = useState('');
 
-  const MOCK = 12;
+  const MOCK = 36;
   const [pets, setPets] = useState(
     Array.from({ length: MOCK }, (_, i) => ({
       id: String(i + 1),
@@ -130,11 +130,11 @@ export default function Pets() {
 
     if (isMobile) {
       if (totalPages <= 3) return Array.from({ length: totalPages }, (_, i) => i + 1);
-      if (currentPage <= 2) return [1, 2, totalPages];
+      if (currentPage <= 2) return [1, 2, '...', totalPages];
       if (currentPage >= totalPages - 1) {
-        return [1, totalPages - 1, totalPages];
+        return [1, '...', totalPages - 1, totalPages];
       }
-      return [1, currentPage, totalPages];
+      return [1, '...', currentPage, '...', totalPages];
     }
 
     if (totalPages <= 5) return Array.from({ length: totalPages }, (_, i) => i + 1);
@@ -199,7 +199,7 @@ export default function Pets() {
             if (page === '...') {
               return (
                 <span key={`dots-${idx}`} className={styles.dots}>
-                  ...
+                  …
                 </span>
               );
             }

@@ -16,24 +16,20 @@ p {
   word-break: break-word;
 }
 
+a {
+  cursor: pointer;
+  color: var(--color-text);
+  text-decoration: underline solid 2px var(--color-primary);
+}
+
 @media (max-width: 768px) {
   p {
     font-size: 0.7rem;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1 {
     font-size: 1rem;
   }
-}
-
-.NotImplemented {
-  color: red;
-  background-color: rgb(255, 249, 88);
 }
 
 button:disabled {

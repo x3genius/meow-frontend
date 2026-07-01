@@ -33,9 +33,12 @@
 .helpDonate {
   cursor: pointer;
   text-align: center;
-  text-decoration-color: var(--color-primary);
   font-family: var(--font-headers);
   font-weight: 500;
+}
+
+.helpDonate:hover {
+  color: var(--color-primary);
 }
 
 .qrWrapper {
