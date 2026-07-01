@@ -36,6 +36,7 @@
   font-size: 1rem;
   color: var(--color-text-muted);
   margin: 0;
+  line-height: normal;
 }
 
 .description {
