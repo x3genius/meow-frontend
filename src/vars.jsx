@@ -54,25 +54,27 @@ export const DOCUMENTS = [
 ];
 
 export const CONTACT_INFO = {
-  address: 'Где-то там далеко...',
-  phone: '88001234567',
+  address: '198206, Россия, Санкт-Петербург, улица Чекистов, 44',
+  phone: '+78005555555',
 };
 
 export const SOCIAL_LINKS = [
-  { id: 1, name: 'Кофе', url: '#' },
-  { id: 2, name: 'Чай', url: '#' },
-  { id: 3, name: 'Молоко', url: '#' },
+  { id: 1, name: 'Telegram', url: 'https://t.me/meowcenterr' },
+  { id: 2, name: 'Vk', url: '#' },
 ];
 
-export const PAY_DATA_HEADER = 'Реквизиты счета в';
+export const PAY_DATA_HEADER = 'Реквизиты счета в Сбере';
 export const PAY_DATA = [
-  'Некоммерческая организация Благотворительный фонд «Мяу-Центр»',
-  'ИНН XXXXXXXXX',
-  'КПП XXXXXXXXX',
-  'БИК XXXXXXXXX',
-  'Р/С XXXXXXXXXXXXXXXXXXX',
-  'К/С XXXXXXXXXXXXXXXXXXX',
-  'в Филиале ',
+  'БЛАГОТВОРИТЕЛЬНЫЙ ФОНД "МЯУ - ЦЕНТР"',
+  'ИНН: 7807405713',
+  'КПП: 780701001',
+  'ОГРН: 1267800041266',
+  'Расчётный счёт: 40703810455710001233',
+  'Банк: СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК',
+  'БИК банка: 044030653',
+  'Корсчёт: 30101810500000000653',
+  'ИНН банка: 7707083893',
+  'КПП банка: 784243001',
 ];
 
 export const FAQ_DATA = [

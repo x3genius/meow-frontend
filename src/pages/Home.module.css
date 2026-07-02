@@ -321,7 +321,6 @@
   max-width: 100%;
   object-fit: contain;
   background-color: var(--color-inverse);
-  border-radius: 2rem;
   padding: 0;
   display: block;
 }

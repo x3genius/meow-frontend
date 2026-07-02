@@ -50,7 +50,7 @@ export default function Help() {
         </p>
         <div className={styles.qrWrapper}>
           <HashLink to="#">
-            <img src="help_qr.png" alt="Пожертвования" className={styles.qrImage} />
+            <img src="help_qr.jpg" alt="Пожертвования" className={styles.qrImage} />
           </HashLink>
         </div>
         <h3>{PAY_DATA_HEADER}</h3>

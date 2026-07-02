@@ -22,9 +22,9 @@ export default function Footer() {
             <span className={styles.city}>Санкт-Петербург</span>
           </div>
           <div className={styles.icons}>
-            {/* <HashLink to="#" target="_blank" rel="noopener noreferrer">
+            <HashLink to="#" target="_blank" rel="noopener noreferrer">
               <VkIcon />
-            </HashLink> */}
+            </HashLink>
             <HashLink
               to="https://t.me/meowcenterr"
               target="_blank"

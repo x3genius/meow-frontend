@@ -55,7 +55,6 @@
   object-fit: contain;
   background-color: var(--color-inverse);
   padding: 20px;
-  border-radius: 2rem;
   padding: 0;
   display: block;
 }
