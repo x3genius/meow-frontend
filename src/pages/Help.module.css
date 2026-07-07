@@ -31,15 +31,16 @@
 }
 
 .helpDonate {
-  cursor: pointer;
+  /* cursor: pointer; */
   text-align: center;
   font-family: var(--font-headers);
   font-weight: 500;
+  text-decoration: underline 2px solid var(--color-primary);
 }
 
-.helpDonate:hover {
+/* .helpDonate:hover {
   color: var(--color-primary);
-}
+} */
 
 .qrWrapper {
   display: flex;

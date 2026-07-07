@@ -5,6 +5,7 @@ import CatIcon from '/src/assets/cat.svg?react';
 import VkIcon from '/src/assets/vk.svg?react';
 import TgIcon from '/src/assets/tg.svg?react';
 import { HashLink } from 'react-router-hash-link';
+import { URL_TG, URL_VK } from '/src/vars.jsx';
 
 const navClass = ({ isActive }) => (isActive ? styles.active : '');
 
@@ -51,14 +52,10 @@ export default function Header() {
               <span className={styles.city}>Санкт-Петербург</span>
             </div>
             <div className={styles.icons}>
-              <HashLink to="#" target="_blank" rel="noopener noreferrer">
+              <HashLink to={URL_VK} target="_blank" rel="noopener noreferrer">
                 <VkIcon />
               </HashLink>
-              <HashLink
-                to="https://t.me/meowcenterr"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <HashLink to={URL_TG} target="_blank" rel="noopener noreferrer">
                 <TgIcon />
               </HashLink>
             </div>

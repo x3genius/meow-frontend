@@ -41,7 +41,7 @@ export default function FAQ({ items }) {
             <div
               className={`${styles.faqCollapse} ${isOpen ? styles.faqCollapseOpen : ''}`}
             >
-              <p className={styles.faqAnswer}>{item.answer}</p>
+              <div className={styles.faqAnswer}>{item.answer}</div>
             </div>
           </div>
         );

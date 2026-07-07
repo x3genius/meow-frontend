@@ -34,36 +34,66 @@ export const AGE_OPTIONS = [
 ];
 
 export const TEAM_MEMBERS = [
-  { id: 1, name: 'Капкаева Лилия', title: 'Должность', img: 'team_empty.png' },
-  { id: 2, name: 'Меграбян Гарегин', title: 'Должность', img: 'team_empty.png' },
-  { id: 3, name: 'Левченко Людмила', title: 'Должность', img: 'team_empty.png' },
-  { id: 4, name: 'Анастасия', title: 'Должность', img: 'team_empty.png' },
-  { id: 5, name: 'Цветкова Вероника', title: 'Должность', img: 'team_empty.png' },
-  { id: 6, name: 'Олина Ольга', title: 'Должность', img: 'team_empty.png' },
-  { id: 7, name: 'Тюрикова Людмила', title: 'Должность', img: 'team_empty.png' },
-  { id: 8, name: 'Сиксе Светлана', title: 'Должность', img: 'team_empty.png' },
-  { id: 9, name: 'Литвинова Ирина', title: 'Должность', img: 'team_empty.png' },
+  {
+    id: 1,
+    name: 'Капкаева Лилия',
+    title: 'Председательница фонда',
+    img: 'team_empty.png',
+  },
+  { id: 2, name: 'Меграбян Гарегин', title: 'Соучередитель', img: 'team_empty.png' },
+  { id: 3, name: 'Левченко Людмила', title: 'Координатор', img: 'team_empty.png' },
+  { id: 4, name: 'Лямзина Анастасия', title: 'Ветеринар', img: 'team_empty.png' },
+  { id: 5, name: 'Малыгина Полина', title: 'Ветеринар', img: 'team_empty.png' },
+  {
+    id: 6,
+    name: 'Марциновская Наталья',
+    title: 'Волонтер-пиарщица',
+    img: 'team_empty.png',
+  },
+  { id: 7, name: 'Демьянюк Наталья', title: 'Волонтер', img: 'team_empty.png' },
+  { id: 8, name: 'Литвинова Ирина', title: 'Волонтер', img: 'team_empty.png' },
+  { id: 9, name: 'Цветкова Вероника', title: 'Волонтер', img: 'team_empty.png' },
+  { id: 10, name: 'Олина Ольга', title: 'Волонтер', img: 'team_empty.png' },
+  { id: 11, name: 'Тюрикова Людмила', title: 'Волонтер', img: 'team_empty.png' },
+  { id: 12, name: 'Сиксе Светлана', title: 'Волонтер', img: 'team_empty.png' },
+  { id: 13, name: 'Гаспарян Светлана', title: 'SMM-специалистка', img: 'team_empty.png' },
 ];
 
 export const DOCUMENTS = [
-  { id: 1, title: 'Устав фонда', url: '#' },
-  { id: 2, title: 'Публичная оферта', url: '#' },
-  { id: 3, title: 'Свидетельство о регистрации', url: '#' },
-  { id: 4, title: 'Свидетельство налогоплательщика', url: '#' },
-  { id: 5, title: 'Свидетельство о регистрации юридического лица', url: '#' },
+  { id: 1, title: 'Устав фонда', url: 'https://disk.yandex.ru/d/v2ZY86Ne43kLYA' },
+  { id: 2, title: 'Публичная оферта', url: 'https://disk.yandex.ru/d/MvOsCvVFtWBlHQ' },
+  {
+    id: 3,
+    title: 'Свидетельство налогоплательщика',
+    url: 'https://disk.yandex.ru/d/pM77o5PU1IMWQg',
+  },
+  {
+    id: 4,
+    title: 'Свидетельство о регистрации юридического лица',
+    url: 'https://disk.yandex.ru/d/1br9jLTf6umxFw',
+  },
 ];
 
 export const CONTACT_INFO = {
-  address: '198206, Россия, Санкт-Петербург, улица Чекистов, 44',
-  phone: '+78005555555',
+  address: '196601, Пушкин, Московское шоссе, 34, помещение 4Н',
+  phone: (
+    <>
+      +79046334111
+      <br />
+      +79500387002
+    </>
+  ),
 };
 
+export const URL_TG = 'https://t.me/meowcenterr';
+export const URL_VK = 'https://vk.ru/meowcenter';
+
 export const SOCIAL_LINKS = [
-  { id: 1, name: 'Telegram', url: 'https://t.me/meowcenterr' },
-  { id: 2, name: 'Vk', url: '#' },
+  { id: 1, name: 'Telegram', url: URL_TG },
+  { id: 2, name: 'Vk', url: URL_VK },
 ];
 
-export const PAY_DATA_HEADER = 'Реквизиты счета в Сбере';
+export const PAY_DATA_HEADER = 'Реквизиты счета';
 export const PAY_DATA = [
   'БЛАГОТВОРИТЕЛЬНЫЙ ФОНД "МЯУ - ЦЕНТР"',
   'ИНН: 7807405713',

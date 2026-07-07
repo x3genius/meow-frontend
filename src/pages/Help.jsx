@@ -43,15 +43,9 @@ export default function Help() {
           Но животных на попечении фонда становится больше, а средства на еду и лекарства
           заканчиваются.
         </p>
-        <p className={styles.centerText}>
-          <HashLink href="#" className={styles.helpDonate}>
-            Вот как вы можете помочь прямо сейчас:
-          </HashLink>
-        </p>
+        <p className={styles.helpDonate}>Вот как вы можете помочь прямо сейчас:</p>
         <div className={styles.qrWrapper}>
-          <HashLink to="#">
-            <img src="help_qr.jpg" alt="Пожертвования" className={styles.qrImage} />
-          </HashLink>
+          <img src="help_qr.jpg" alt="Пожертвования" className={styles.qrImage} />
         </div>
         <h3>{PAY_DATA_HEADER}</h3>
         <p className={styles.centerText}>

@@ -158,7 +158,13 @@ export default function Home() {
         <h1>Документы и реквизиты</h1>
         <div className={styles.docsList}>
           {DOCUMENTS.map((doc) => (
-            <HashLink key={doc.id} className={styles.docItem} to={doc.url}>
+            <HashLink
+              key={doc.id}
+              className={styles.docItem}
+              to={doc.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <DocIcon /> {doc.title}
             </HashLink>
           ))}
@@ -197,7 +203,9 @@ export default function Home() {
             <ul>
               {SOCIAL_LINKS.map((link) => (
                 <li key={link.id}>
-                  <HashLink to={link.url}>{link.name}</HashLink>
+                  <HashLink to={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.name}
+                  </HashLink>
                 </li>
               ))}
             </ul>
