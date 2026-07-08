@@ -56,21 +56,26 @@ export const TEAM_MEMBERS = [
   { id: 10, name: 'Олина Ольга', title: 'Волонтер', img: 'team_empty.png' },
   { id: 11, name: 'Тюрикова Людмила', title: 'Волонтер', img: 'team_empty.png' },
   { id: 12, name: 'Сиксе Светлана', title: 'Волонтер', img: 'team_empty.png' },
-  { id: 13, name: 'Гаспарян Светлана', title: 'SMM-специалистка', img: 'team_empty.png' },
+  {
+    id: 13,
+    name: 'Гаспарьян Светлана',
+    title: 'SMM-специалистка',
+    img: 'team_empty.png',
+  },
 ];
 
 export const DOCUMENTS = [
-  { id: 1, title: 'Устав фонда', url: 'https://disk.yandex.ru/d/v2ZY86Ne43kLYA' },
-  { id: 2, title: 'Публичная оферта', url: 'https://disk.yandex.ru/d/MvOsCvVFtWBlHQ' },
+  { id: 1, title: 'Устав фонда', url: '/Устав.pdf' },
+  { id: 2, title: 'Публичная оферта', url: '/Оферта.pdf' },
   {
     id: 3,
     title: 'Свидетельство налогоплательщика',
-    url: 'https://disk.yandex.ru/d/pM77o5PU1IMWQg',
+    url: '/Налогоплательщик.pdf',
   },
   {
     id: 4,
     title: 'Свидетельство о регистрации юридического лица',
-    url: 'https://disk.yandex.ru/d/1br9jLTf6umxFw',
+    url: '/Юрлицо.pdf',
   },
 ];
 
