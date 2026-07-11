@@ -114,7 +114,7 @@ export default function PetSlider({ photos = [] }) {
 
       {isModalOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
-          <div className={styles.modalContent}>
+          <div className={styles.modalContent} onClick={closeModal}>
             <button className={styles.closeBtn} onClick={() => setIsModalOpen(false)}>
               &#10006;
             </button>

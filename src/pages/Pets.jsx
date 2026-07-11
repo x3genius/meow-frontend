@@ -33,6 +33,10 @@ export default function Pets() {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
+  useEffect(() => {
     let isMounted = true;
 
     const loadPetsData = async () => {
@@ -171,7 +175,7 @@ export default function Pets() {
         </Checkbox>
       </div>
       {loading ? <p className={styles.infoMessage}> Загрузка... </p> : <></>}
-      {(error && !loading) ? <p className={styles.infoMessage}> {error} </p> : <></>}
+      {error && !loading ? <p className={styles.infoMessage}> {error} </p> : <></>}
       {displayedPets.length === 0 ? (
         <p className={styles.infoMessage}>Питомцы с такими параметрами не найдены.</p>
       ) : (
