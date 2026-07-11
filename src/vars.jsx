@@ -13,7 +13,7 @@ export const URL_TO_TAKE = (purpose = '', cat = '', cat_id = '') => {
   if (cat != '') {
     params.append('answer_cat_name', cat);
   }
-  if (link != '') {
+  if (cat_id != '') {
     params.append('answer_cat_link', `https://meow-center.ru/pets/${cat_id}`);
   }
 
