@@ -75,7 +75,16 @@ export default function PetSlider({ photos = [] }) {
   return (
     <div className={styles.sliderContainer}>
       <div className={styles.mainImageWrapper} onClick={openModal}>
-        <img src={currentPhoto.image} alt="Pet" className={styles.mainImage} />
+        {photos.map((photo, index) => (
+          <img
+            key={photo.id || index}
+            src={photo.image}
+            alt={`Pet ${index + 1}`}
+            className={`${styles.mainImage} ${
+              index === currentIndex ? styles.activeImage : styles.hiddenImage
+            }`}
+          />
+        ))}
 
         {photos.length > 1 && (
           <>
@@ -93,7 +102,7 @@ export default function PetSlider({ photos = [] }) {
         <div className={styles.thumbnailsContainer}>
           {photos.map((photo, index) => (
             <img
-              key={photo.id}
+              key={photo.id || index}
               src={photo.image}
               alt={`Thumbnail ${index + 1}`}
               className={`${styles.thumbnail} ${index === currentIndex ? styles.activeThumbnail : ''}`}
@@ -109,12 +118,21 @@ export default function PetSlider({ photos = [] }) {
             <button className={styles.closeBtn} onClick={() => setIsModalOpen(false)}>
               &#10006;
             </button>
-            <img
-              src={currentPhoto.image}
-              alt="Pet Enlarge"
-              className={styles.modalImage}
-              onClick={(e) => e.stopPropagation()}
-            />
+
+            {/* Рендерим все картинки, как и в главном окне */}
+            {photos.map((photo, index) => (
+              <img
+                key={`modal-${photo.id || index}`}
+                src={photo.image}
+                alt={`Pet Enlarge ${index + 1}`}
+                className={`${styles.modalImage} ${
+                  index === currentIndex
+                    ? styles.modalImageActive
+                    : styles.modalImageHidden
+                }`}
+                onClick={(e) => e.stopPropagation()}
+              />
+            ))}
 
             {photos.length > 1 && (
               <>

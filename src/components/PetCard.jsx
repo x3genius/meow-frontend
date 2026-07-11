@@ -11,9 +11,7 @@ export default function PetCard({ children, data, short = false, ...props }) {
     name: data?.name || `Питомец ${pet_id}`,
     age: data?.age || 'возраст',
     gender: GENDER_ENUM[data?.gender] || 'пол',
-    description:
-      data?.description ||
-      `Замечательный питомец под номером ${pet_id}, который ищет дом и любящую семью.`,
+    description: data?.description || `Загрузка...`,
     photos: data?.photos || [],
   };
 

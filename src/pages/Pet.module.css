@@ -7,23 +7,29 @@
 }
 
 .petContainer {
-  display: grid;
-  grid-template-columns: 6fr 4fr;
-  gap: 2rem;
-  align-items: start;
+  display: flow-root;
 }
 
 .petMedia {
-  width: 100%;
+  float: left;
+  width: 55%;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  max-width: 100%;
 }
 
 .petInfo {
   padding: 0;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  justify-content: center;
+  display: block;
+}
+
+.petInfo > * {
+  margin-bottom: 0.75rem;
+}
+
+.petInfo > *:last-child {
+  margin-bottom: 0;
 }
 
 .petName {
@@ -52,6 +58,7 @@
   gap: 0.5rem;
   margin-top: 1.5rem;
   justify-content: center;
+  clear: both;
 }
 
 .pawPet {
@@ -69,9 +76,10 @@
 }
 
 @media (max-width: 768px) {
-  .petContainer {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .petMedia {
+    float: none;
+    width: 100%;
+    margin-right: 0;
   }
   .petName {
     text-align: center;
@@ -79,24 +87,21 @@
   .specifications {
     text-align: center;
   }
-  .petInfo {
-    gap: 0.5rem;
+  .petInfo > * {
+    margin-bottom: 0.5rem;
   }
 }
 
 @media (max-width: 500px) {
   .petName {
-    text-align: center;
     font-size: 1rem !important;
   }
 
   .specifications {
-    text-align: center;
     font-size: 0.8rem !important;
   }
 
   .description {
-    text-align: left;
     font-size: 0.8rem !important;
   }
 

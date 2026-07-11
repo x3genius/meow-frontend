@@ -15,7 +15,7 @@ export default function Pets() {
   const [pets, setPets] = useState(
     Array.from({ length: MOCK }, (_, i) => ({
       id: String(i + 1),
-      name: `Питомец ${i + 1}`,
+      name: `Питомец`,
       age_category: ['little', 'adult', 'elderly'][i % 3],
       gender: i % 2 === 0 ? 'male' : 'female',
       health_issues: i % 4 === 0,
