@@ -4,6 +4,13 @@
   margin-inline: auto;
 }
 
+.mutedText {
+  text-align: center;
+  max-width: 1160px;
+  margin-inline: auto;
+  color: var(--color-text-muted);
+}
+
 .faqSection {
   padding-block: 2rem;
   gap: 0.5rem;
@@ -44,6 +51,8 @@
 
 .qrWrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-top: 1rem;
   padding: 0 2rem;

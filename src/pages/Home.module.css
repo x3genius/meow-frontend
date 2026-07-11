@@ -4,6 +4,13 @@
   margin-inline: auto;
 }
 
+.mutedText {
+  text-align: center;
+  max-width: 1160px;
+  margin-inline: auto;
+  color: var(--color-text-muted);
+}
+
 .centerBtnWrapper {
   display: flex;
   justify-content: center;
@@ -319,6 +326,8 @@
 
 .qrWrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-top: 1rem;
   padding: 60px;

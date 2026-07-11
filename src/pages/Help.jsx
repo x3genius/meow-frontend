@@ -46,6 +46,9 @@ export default function Help() {
         <p className={styles.helpDonate}>Вот как вы можете помочь прямо сейчас:</p>
         <div className={styles.qrWrapper}>
           <img src="help_qr.jpg" alt="Пожертвования" className={styles.qrImage} />
+          <p className={styles.mutedText}>
+            Отсканировать можно в приложении любого банка
+          </p>
         </div>
         <h3>{PAY_DATA_HEADER}</h3>
         <p className={styles.centerText}>

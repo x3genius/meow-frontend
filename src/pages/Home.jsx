@@ -10,7 +10,6 @@ import PawHomeAbout from '/src/assets/paws/PawHomeAbout.svg?react';
 import PawHomeTeam from '/src/assets/paws/PawHomeTeam.svg?react';
 import PawHomeDocs from '/src/assets/paws/PawHomeDocs.svg?react';
 import {
-  URL_TO_TAKE,
   URL_BECOME_VOLUNTEER,
   TEAM_MEMBERS,
   FAQ_DATA,
@@ -173,6 +172,9 @@ export default function Home() {
           <HashLink to="/help">
             <img src="help_qr.jpg" alt="Пожертвования" className={styles.qrImage} />
           </HashLink>
+          <p className={styles.mutedText}>
+            Отсканировать можно в приложении любого банка
+          </p>
         </div>
         <h3>{PAY_DATA_HEADER}</h3>
         <p className={styles.centerText}>

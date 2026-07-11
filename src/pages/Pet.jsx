@@ -71,8 +71,10 @@ export default function Pet() {
             Видео
           </Button>
         )}
-        <Button href={URL_TO_TAKE('owner', pet.name)}>Стать хозяином</Button>
-        <Button href={URL_TO_TAKE('overexposure', pet.name)}>Взять на передержку</Button>
+        <Button href={URL_TO_TAKE('owner', pet.name, id)}>Стать хозяином</Button>
+        <Button href={URL_TO_TAKE('overexposure', pet.name, id)}>
+          Взять на передержку
+        </Button>
       </div>
 
       <PawPet className={styles.pawPet} />

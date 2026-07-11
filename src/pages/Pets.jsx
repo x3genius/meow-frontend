@@ -4,7 +4,7 @@ import Checkbox from '/src/basics/Checkbox.jsx';
 import PetCard from '/src/components/PetCard.jsx';
 import styles from './Pets.module.css';
 import PawPets from '/src/assets/paws/PawPets.svg?react';
-import { URL_TO_TAKE, GENDER_OPTIONS, AGE_OPTIONS } from '/src/vars.jsx';
+import { GENDER_OPTIONS, AGE_OPTIONS } from '/src/vars.jsx';
 
 export default function Pets() {
   const [isHealthFeatures, setIsHealthFeatures] = useState(false);
