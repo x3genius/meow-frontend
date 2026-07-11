@@ -170,7 +170,8 @@ export default function Pets() {
           Особенности здоровья
         </Checkbox>
       </div>
-      {error ? <p className={styles.infoMessage}> {error} </p> : <></>}
+      {loading ? <p className={styles.infoMessage}> Загрузка... </p> : <></>}
+      {(error && !loading) ? <p className={styles.infoMessage}> {error} </p> : <></>}
       {displayedPets.length === 0 ? (
         <p className={styles.infoMessage}>Питомцы с такими параметрами не найдены.</p>
       ) : (

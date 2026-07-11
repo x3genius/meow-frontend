@@ -104,7 +104,7 @@ export default function PetSlider({ photos = [] }) {
             <img
               key={photo.id || index}
               src={photo.image}
-              alt={`Thumbnail ${index + 1}`}
+              alt={`img ${index + 1}`}
               className={`${styles.thumbnail} ${index === currentIndex ? styles.activeThumbnail : ''}`}
               onClick={() => setCurrentIndex(index)}
             />
@@ -119,12 +119,11 @@ export default function PetSlider({ photos = [] }) {
               &#10006;
             </button>
 
-            {/* Рендерим все картинки, как и в главном окне */}
             {photos.map((photo, index) => (
               <img
                 key={`modal-${photo.id || index}`}
                 src={photo.image}
-                alt={`Pet Enlarge ${index + 1}`}
+                alt={`img ${index + 1}`}
                 className={`${styles.modalImage} ${
                   index === currentIndex
                     ? styles.modalImageActive
