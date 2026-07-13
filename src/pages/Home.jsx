@@ -28,7 +28,7 @@ export default function Home() {
           <div className={styles.heroContentWrapper}>
             <h1>
               Добро пожаловать
-              <br />в «Мяу-центр»!
+              <br />в «Мяу-Центр»!
             </h1>
             <p className={styles.heroSubtitle}>
               «Спасая животное, мы спасаем человека внутри себя»

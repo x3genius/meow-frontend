@@ -12,7 +12,7 @@ export default function Footer() {
         <div className={styles.leftSide}>
           <div className={styles.logo}>
             <CatIcon />
-            <span>Мяу-центр</span>
+            <span>Мяу-Центр</span>
           </div>
           <div className={styles.copyright}>© 2026 - 2026 БФ "Мяу-Центр"</div>
         </div>

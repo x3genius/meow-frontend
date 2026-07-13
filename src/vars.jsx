@@ -93,7 +93,12 @@ export const TEAM_MEMBERS = [
     title: 'Волонтер',
     img: '/team/Тюрикова_Людмила.png',
   },
-  { id: 12, name: 'Сиксе Светлана', title: 'Волонтер', img: '/team/Сиксе_Светлана.png' },
+  {
+    id: 12,
+    name: 'Сиксне Светлана',
+    title: 'Волонтер',
+    img: '/team/Сиксне_Светлана.png',
+  },
   {
     id: 13,
     name: 'Гаспарьян Светлана',
@@ -121,9 +126,9 @@ export const CONTACT_INFO = {
   address: '196601, Пушкин, Московское шоссе, 34, помещение 4Н',
   phone: (
     <>
-      +79046334111
+      +7 (981) 006-41-11
       <br />
-      +79500387002
+      +7 (950) 038-70-02
     </>
   ),
 };
@@ -133,7 +138,7 @@ export const URL_VK = 'https://vk.ru/meowcenter';
 
 export const SOCIAL_LINKS = [
   { id: 1, name: 'Telegram', url: URL_TG },
-  { id: 2, name: 'Vk', url: URL_VK },
+  { id: 2, name: 'VK', url: URL_VK },
 ];
 
 export const PAY_DATA_HEADER = 'Реквизиты счета';
@@ -152,7 +157,7 @@ export const PAY_DATA = [
 
 export const FAQ_DATA = [
   {
-    question: 'Является ли «Мяу-центр» официальным Благотворительным фондом?',
+    question: 'Является ли «Мяу-Центр» официальным Благотворительным фондом?',
     answer: (
       <>
         Да, «Мяу-Центр» является официально зарегистрированным благотворительным фондом.

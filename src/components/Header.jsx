@@ -19,7 +19,7 @@ export default function Header() {
         <NavLink to="/">
           <div className={styles.logo}>
             <CatIcon />
-            <span>Мяу-центр</span>
+            <span>Мяу-Центр</span>
           </div>
         </NavLink>
 
