@@ -170,7 +170,7 @@ export default function Home() {
         </div>
         <div className={styles.qrWrapper}>
           <HashLink to="/help">
-            <img src="help_qr.jpg" alt="Пожертвования" className={styles.qrImage} />
+            <img src="help_qr.png" alt="Пожертвования" className={styles.qrImage} />
           </HashLink>
           <p className={styles.mutedText}>
             Отсканировать можно в приложении любого банка
