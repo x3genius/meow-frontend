@@ -46,7 +46,7 @@ export default function Home() {
             Помощь центру
           </Button>
           <Button variant="inverted" href="#pets">
-            Наши питомцы
+            Ищут дом
           </Button>
           <Button variant="inverted" href="#team">
             Наша команда
@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       <section id="pets" className={styles.petsSection}>
-        <h1>Наши питомцы</h1>
+        <h1>Ищут дом</h1>
         <p className={styles.centerText}>
           Мы поможем выбрать питомца из центра и подготовиться к его переезду.
           <br />
@@ -169,13 +169,26 @@ export default function Home() {
           ))}
         </div>
         <div className={styles.qrWrapper}>
-          <HashLink to="/help">
-            <img src="help_qr.svg" alt="Пожертвования" className={styles.qrImage} />
-          </HashLink>
-          <p className={styles.mutedText}>
+          <span className={styles.mutedText}>
             Отсканировать можно в приложении любого банка
-          </p>
+          </span>
+          <HashLink to="/help">
+            <img src="qr_bank.svg" alt="Пожертвования" className={styles.qrImage} />
+          </HashLink>
         </div>
+        <div className={styles.qrWrapper}>
+          <img src="qr_kassa.png" alt="Пожертвования-юкасса" className={styles.qrImage} />
+        </div>
+        <h3>Помочь легко и быстро</h3>
+        <p className={styles.centerText}>
+          <Button
+            href="https://yookassa.ru/my/i/amoxsc64rhI9/l"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            СБП-Юкасса
+          </Button>
+        </p>
         <h3>{PAY_DATA_HEADER}</h3>
         <p className={styles.centerText}>
           {PAY_DATA.map((item, index) => (

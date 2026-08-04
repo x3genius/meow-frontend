@@ -95,12 +95,6 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 12,
-    name: 'Сиксне Светлана',
-    title: 'Волонтер',
-    img: '/team/Сиксне_Светлана.png',
-  },
-  {
-    id: 13,
     name: 'Гаспарьян Светлана',
     title: 'SMM-специалистка',
     img: '/team/Гаспарьян_Светлана.png',

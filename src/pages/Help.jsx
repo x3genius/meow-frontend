@@ -45,11 +45,24 @@ export default function Help() {
         </p>
         <p className={styles.helpDonate}>Вот как вы можете помочь прямо сейчас:</p>
         <div className={styles.qrWrapper}>
-          <img src="help_qr.svg" alt="Пожертвования" className={styles.qrImage} />
-          <p className={styles.mutedText}>
+          <span className={styles.mutedText}>
             Отсканировать можно в приложении любого банка
-          </p>
+          </span>
+          <img src="qr_bank.svg" alt="Пожертвования-банк" className={styles.qrImage} />
         </div>
+        <div className={styles.qrWrapper}>
+          <img src="qr_kassa.png" alt="Пожертвования-юкасса" className={styles.qrImage} />
+        </div>
+        <h3>Помочь легко и быстро</h3>
+        <p className={styles.centerText}>
+          <Button
+            href="https://yookassa.ru/my/i/amoxsc64rhI9/l"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            СБП-Юкасса
+          </Button>
+        </p>
         <h3>{PAY_DATA_HEADER}</h3>
         <p className={styles.centerText}>
           {PAY_DATA.map((item, index) => (
