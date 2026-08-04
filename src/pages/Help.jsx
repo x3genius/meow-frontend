@@ -12,6 +12,7 @@ import {
   OVEREXPOSURE_DATA,
   PAY_DATA_HEADER,
   PAY_DATA,
+  DONATION_URL,
 } from '/src/vars.jsx';
 
 export default function Help() {
@@ -55,11 +56,7 @@ export default function Help() {
         </div>
         <h3>Помочь легко и быстро</h3>
         <p className={styles.centerText}>
-          <Button
-            href="https://yookassa.ru/my/i/amoxsc64rhI9/l"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Button href={DONATION_URL} target="_blank" rel="noopener noreferrer">
             СБП-Юкасса
           </Button>
         </p>

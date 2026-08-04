@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import Button from '/src/basics/Button.jsx';
 import FAQ from '/src/basics/FAQ.jsx';
+import PetsTreatment from '../components/PetsTreatment';
 import PetsRandom from '/src/components/PetsRandom.jsx';
 import ContactMap from '/src/components/ContactMap.jsx';
 import styles from './Home.module.css';
@@ -18,6 +19,7 @@ import {
   SOCIAL_LINKS,
   PAY_DATA,
   PAY_DATA_HEADER,
+  DONATION_URL,
 } from '/src/vars.jsx';
 
 export default function Home() {
@@ -76,6 +78,11 @@ export default function Home() {
         </p>
         <PawHomeAbout className={styles.pawHomeAbout} />
       </section>
+
+      {/* <section id="treatment" className={styles.treatmentSection}>
+        <h1>Нуждающиеся в лечении</h1>
+        <PetsTreatment />
+      </section> */}
 
       <section id="help" className={styles.helpSection}>
         <h1>Помощь центру</h1>
@@ -172,20 +179,14 @@ export default function Home() {
           <span className={styles.mutedText}>
             Отсканировать можно в приложении любого банка
           </span>
-          <HashLink to="/help">
-            <img src="qr_bank.svg" alt="Пожертвования" className={styles.qrImage} />
-          </HashLink>
+          <img src="qr_bank.svg" alt="Пожертвования" className={styles.qrImage} />
         </div>
         <div className={styles.qrWrapper}>
           <img src="qr_kassa.png" alt="Пожертвования-юкасса" className={styles.qrImage} />
         </div>
         <h3>Помочь легко и быстро</h3>
         <p className={styles.centerText}>
-          <Button
-            href="https://yookassa.ru/my/i/amoxsc64rhI9/l"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Button href={DONATION_URL} target="_blank" rel="noopener noreferrer">
             СБП-Юкасса
           </Button>
         </p>

@@ -135,6 +135,8 @@ export const SOCIAL_LINKS = [
   { id: 2, name: 'VK', url: URL_VK },
 ];
 
+export const DONATION_URL = 'https://yookassa.ru/my/i/amoxsc64rhI9/l';
+
 export const PAY_DATA_HEADER = 'Реквизиты счета';
 export const PAY_DATA = [
   'БЛАГОТВОРИТЕЛЬНЫЙ ФОНД "МЯУ - ЦЕНТР"',

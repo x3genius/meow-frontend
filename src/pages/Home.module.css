@@ -112,7 +112,7 @@
 .pawHomeAbout {
   position: absolute;
   pointer-events: none;
-  z-index: 2;
+  z-index: -1;
   bottom: -100%;
   width: 99vw;
   left: 50%;
@@ -121,6 +121,12 @@
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
+}
+
+/* treatment-section */
+
+.treatmentSection {
+  padding-block: 2rem;
 }
 
 /* help-section */
