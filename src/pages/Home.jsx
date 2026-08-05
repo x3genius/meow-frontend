@@ -79,10 +79,10 @@ export default function Home() {
         <PawHomeAbout className={styles.pawHomeAbout} />
       </section>
 
-      {/* <section id="treatment" className={styles.treatmentSection}>
+      <section id="treatment" className={styles.treatmentSection}>
         <h1>Нуждающиеся в лечении</h1>
         <PetsTreatment />
-      </section> */}
+      </section>
 
       <section id="help" className={styles.helpSection}>
         <h1>Помощь центру</h1>
@@ -175,21 +175,15 @@ export default function Home() {
             </HashLink>
           ))}
         </div>
-        <div className={styles.qrWrapper}>
-          <span className={styles.mutedText}>
-            Отсканировать можно в приложении любого банка
-          </span>
-          <img src="qr_bank.svg" alt="Пожертвования" className={styles.qrImage} />
-        </div>
-        <div className={styles.qrWrapper}>
-          <img src="qr_kassa.png" alt="Пожертвования-юкасса" className={styles.qrImage} />
-        </div>
         <h3>Помочь легко и быстро</h3>
         <p className={styles.centerText}>
           <Button href={DONATION_URL} target="_blank" rel="noopener noreferrer">
             СБП-Юкасса
           </Button>
         </p>
+        <div className={styles.qrWrapper}>
+          <img src="qr_kassa.png" alt="Пожертвования-юкасса" className={styles.qrImage} />
+        </div>
         <h3>{PAY_DATA_HEADER}</h3>
         <p className={styles.centerText}>
           {PAY_DATA.map((item, index) => (
@@ -199,6 +193,12 @@ export default function Home() {
             </Fragment>
           ))}
         </p>
+        <div className={styles.qrWrapper}>
+          <img src="qr_bank.svg" alt="Пожертвования" className={styles.qrImage} />
+          <span className={styles.mutedText}>
+            Отсканировать можно в приложении любого банка
+          </span>
+        </div>
 
         <PawHomeDocs className={styles.pawHomeDocs} />
       </section>

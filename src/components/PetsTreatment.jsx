@@ -49,7 +49,7 @@ export default function PetsTreatment() {
         if (res.ok) {
           const data = await res.json();
           const results = Array.isArray(data) ? data : data.results || [];
-          if (isMounted && results.length > 0) {
+          if (isMounted) {
             setPets(results);
           }
         }
@@ -114,7 +114,8 @@ export default function PetsTreatment() {
     }
   };
 
-  if (pets.length === 0) return null;
+  if (pets.length === 0)
+    return <p className={styles.centerText}>Сейчас все питомцы здоровы</p>;
 
   return (
     <div className={styles.wrapper}>
