@@ -10,7 +10,7 @@ export default function PetsTreatment() {
     Array.from({ length: MOCK }, (_, i) => ({
       id: String(i + 1),
       name: `Питомец ${i + 1}`,
-      treatment: 'Нуждается в лечении',
+      treatment_description: 'Нуждается в лечении',
       photos: [],
     })),
   );
@@ -141,11 +141,9 @@ export default function PetsTreatment() {
         >
           {slides.map((pet, idx) => {
             const isCenter = idx === currentIndex;
+            const cleaned = pet.treatment_description?.replace(/[\s\p{P}]/gu, '') || '';
             const treatmentText =
-              pet.treatment ||
-              pet.treatment_needed ||
-              pet.description ||
-              'Требуется лечение';
+              cleaned.length > 0 ? pet.treatment_description : 'Требуется лечение';
 
             return (
               <div
