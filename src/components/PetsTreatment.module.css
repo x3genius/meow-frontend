@@ -18,7 +18,7 @@
   overflow: hidden;
   cursor: grab;
   user-select: none;
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
 }
 
 .carouselContainer:active {
@@ -103,7 +103,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0;
   padding-right: 1rem;
 }
 
