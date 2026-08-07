@@ -45,15 +45,7 @@ export default function Help() {
           заканчиваются.
         </p>
         <p className={styles.helpDonate}>Вот как вы можете помочь прямо сейчас:</p>
-        <h3>Помочь легко и быстро</h3>
-        <p className={styles.centerText}>
-          <Button href={DONATION_URL} target="_blank" rel="noopener noreferrer">
-            СБП-Юкасса
-          </Button>
-        </p>
-        <div className={styles.qrWrapper}>
-          <img src="qr_kassa.png" alt="Пожертвования-юкасса" className={styles.qrImage} />
-        </div>
+
         <h3>{PAY_DATA_HEADER}</h3>
         <p className={styles.centerText}>
           {PAY_DATA.map((item, index) => (
@@ -70,6 +62,16 @@ export default function Help() {
           </span>
         </div>
       </section>
+
+      <h3>Помочь легко и быстро</h3>
+      <p className={styles.centerText}>
+        <Button href={DONATION_URL} target="_blank" rel="noopener noreferrer">
+          СБП-Юкасса
+        </Button>
+      </p>
+      <div className={styles.qrWrapper}>
+        <img src="qr_kassa.png" alt="Пожертвования-юкасса" className={styles.qrImage} />
+      </div>
 
       <section id="volunteer" className={styles.faqSection}>
         <h1>Стать волонтёром</h1>
