@@ -48,6 +48,10 @@ export default function Help() {
 
         <h3>{PAY_DATA_HEADER}</h3>
         <p className={styles.centerText}>
+          <span className={styles.mutedText}>
+              Перевод доступен в приложении любого банка (не СБП)
+          </span>
+          <br />
           {PAY_DATA.map((item, index) => (
             <Fragment key={index}>
               <span>{item}</span>
