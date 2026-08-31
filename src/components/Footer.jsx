@@ -2,8 +2,10 @@ import styles from './Footer.module.css';
 import CatIcon from '/src/assets/footer.svg?react';
 import VkIcon from '/src/assets/vk.svg?react';
 import TgIcon from '/src/assets/tg.svg?react';
+import MaxIcon from '/src/assets/max.svg?react';
 import { HashLink } from 'react-router-hash-link';
 import { URL_TG, URL_VK } from '/src/vars.jsx';
+import { URL_MAX } from '../vars';
 
 export default function Footer() {
   return (
@@ -14,7 +16,7 @@ export default function Footer() {
             <CatIcon />
             <span>Мяу-Центр</span>
           </div>
-          <div className={styles.copyright}>© 2026 - 2026 БФ "Мяу-Центр"</div>
+          <div className={styles.copyright}>© 2026 - 2026 БФ &quot;Мяу-Центр&quot;</div>
         </div>
 
         <div className={styles.rightSide}>
@@ -28,6 +30,10 @@ export default function Footer() {
             </HashLink>
             <HashLink to={URL_TG} target="_blank" rel="noopener noreferrer">
               <TgIcon />
+            </HashLink>
+            <HashLink to={URL_MAX} target="_blank" rel="noopener noreferrer">
+              <MaxIcon width={32}
+                height={32} />
             </HashLink>
           </div>
         </div>

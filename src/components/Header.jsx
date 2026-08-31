@@ -4,8 +4,9 @@ import styles from './Header.module.css';
 import CatIcon from '/src/assets/cat.svg?react';
 import VkIcon from '/src/assets/vk.svg?react';
 import TgIcon from '/src/assets/tg.svg?react';
+import MaxIcon from '/src/assets/max.svg?react';
 import { HashLink } from 'react-router-hash-link';
-import { URL_TG, URL_VK } from '/src/vars.jsx';
+import { URL_TG, URL_VK, URL_MAX } from '/src/vars.jsx';
 
 const navClass = ({ isActive }) => (isActive ? styles.active : '');
 
@@ -57,6 +58,10 @@ export default function Header() {
               </HashLink>
               <HashLink to={URL_TG} target="_blank" rel="noopener noreferrer">
                 <TgIcon />
+              </HashLink>
+              <HashLink to={URL_MAX} target="_blank" rel="noopener noreferrer">
+                <MaxIcon width={32}
+                  height={32} />
               </HashLink>
             </div>
           </div>

@@ -129,10 +129,12 @@ export const CONTACT_INFO = {
 
 export const URL_TG = 'https://t.me/meowcenterr';
 export const URL_VK = 'https://vk.ru/meowcenter';
+export const URL_MAX = 'https://max.ru/join/Wv96En3P7TmJwTWW6Pduwfz6mcaplexrNnagltsaYag'
 
 export const SOCIAL_LINKS = [
   { id: 1, name: 'Telegram', url: URL_TG },
   { id: 2, name: 'VK', url: URL_VK },
+  { id: 3, name: 'MAX', url: URL_MAX }
 ];
 
 export const DONATION_URL = 'https://yookassa.ru/my/i/amoxsc64rhI9/l';
@@ -223,7 +225,7 @@ export const FAQ_DATA = [
             забрал её домой.
           </li>
         </ul>
-        Просто напишите нам в любой социальной сети (ВК/ТГ): «Хочу помочь. Что нужно?» — и
+        Просто напишите нам в любой социальной сети (ВК/ТГ/MAX): «Хочу помочь. Что нужно?» — и
         мы ответим.
       </>
     ),
@@ -233,7 +235,7 @@ export const FAQ_DATA = [
     answer: (
       <>
         Стать волонтёром «Мяу-Центра» очень просто. Напишите нам сообщение в любой
-        социальной сети (ВК/ТГ) или заполните{' '}
+        социальной сети (ВК/ТГ/MAX) или заполните{' '}
         <HashLink to={URL_BECOME_VOLUNTEER}>короткую форму</HashLink> в разделе «Стать
         частью команды». Мы свяжемся с вами, расскажем, какие задачи есть сейчас, и
         подберём то, что вам подходит по силам и времени. <br /> <br />
